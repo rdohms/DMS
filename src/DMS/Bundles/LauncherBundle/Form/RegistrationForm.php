@@ -1,0 +1,28 @@
+<?php
+
+namespace DMS\Bundles\LauncherBundle\Form;
+
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilder;
+
+class RegistrationForm extends AbstractType
+{
+    public function buildForm(FormBuilder $builder, array $options)
+    {
+        $builder
+            ->add('email', null, array(
+                'label' => 'Enter your email to be the first to know when we launch!'
+            ))
+            ->add('username', null, array(
+                'label' => 'Reserve your username for our launch!'
+            ))
+            ->add('referrerToken', 'hidden')
+            ->add('referrerUrl', 'hidden')
+        ;
+    }
+
+    public function getName()
+    {
+        return 'dms_bundles_launcherbundle_registration';
+    }
+}

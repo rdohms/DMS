@@ -1,0 +1,24 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+{{parent()}}
+<link href="{{ asset( dms_launcher_stylesheet ) }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+
+	{% block launcher_body %}
+	<div class="launcher box container">
+		<h1 id="">
+			{% block app_title %}Application Name{% endblock %}
+		</h1>
+
+		<div class="about">
+			{% block app_about %}We are still working hard on delivering this awesome service to you, but soon you will be enjoying all this website has to offer.{% endblock %}
+		</div>
+
+		{% block launcher_content %}{% endblock %}
+	
+	</div>
+	{% endblock %}
+{% endblock %}

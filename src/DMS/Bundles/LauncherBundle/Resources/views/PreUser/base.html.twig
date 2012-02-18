@@ -1,0 +1,16 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+{{parent()}}
+<link href="{{ asset( 'bundles/dmslauncher/css/admin.css' ) }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+
+    <h1>DMS Launcher Bundle &raquo; Administration </h1>
+    <div class="launcher_admin">
+    {% block launcher_admin %}
+
+    {% endblock %}
+    </div>
+{% endblock %}

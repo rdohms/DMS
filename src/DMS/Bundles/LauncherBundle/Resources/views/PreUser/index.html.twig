@@ -1,0 +1,37 @@
+{% extends 'DMSLauncherBundle:PreUser:base.html.twig' %}
+
+{% block launcher_admin %}
+<h2>Pre-Registered Users</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Email</th>
+            <th>Username</th>
+            <th>Token</th>
+            <th>Referrer</th>
+            <th>Referrer Token</th>
+            <th>Registration Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('admin_preuser_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td>{{ entity.email }}</td>
+            <td>{{ entity.username }}</td>
+            <td>{{ entity.token }}</td>
+            <td>{{ entity.referrerUrl }}</td>
+            <td>{{ entity.referrerToken }}</td>
+            <td>{% if entity.registeredOn %}{{ entity.registeredOn|date('d/m/Y H:i:s') }}{% endif%}</td>
+            <td>
+                <a href="{{ path('admin_preuser_show', { 'id': entity.id }) }}">details</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+

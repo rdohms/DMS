@@ -1,0 +1,11 @@
+services:
+    dms_launcher.export:
+        class: DMS\Bundles\LauncherBundle\Service\ExportService
+        arguments:
+            doctrine_em: @doctrine.orm.entity_manager
+    dms_launcher.launcher_extension:
+        class: DMS\Bundles\LauncherBundle\Twig\LauncherExtension
+        calls:
+            - [ setContainer,  [@service_container] ]
+        tags:
+            - { name: twig.extension }

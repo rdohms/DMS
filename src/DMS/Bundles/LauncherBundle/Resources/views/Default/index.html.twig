@@ -1,0 +1,11 @@
+{% extends 'DMSLauncherBundle:Default:base.html.twig' %}
+
+{% block launcher_content %}
+	<form action="{{ path('launcher_register') }}" method="post" {{ form_enctype(form) }} class="form">
+		{{ form_widget(form) }}
+		<div class="submit">
+			<input type="submit" class="btn primary" value="Sign me up!">
+		</div>
+	</form>
+
+{% endblock %}
