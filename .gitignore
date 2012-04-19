@@ -1,5 +1,9 @@
 .DS_Store
-tests/_reports/*
-/_build/
-_distribution
 .idea/
+
+tests/_reports/*
+_build/
+_distribution
+
+vendor/
+composer.lock
