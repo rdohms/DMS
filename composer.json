@@ -1,7 +1,7 @@
 {
     "name":        "dms/dms",
     "type":        "library",
-    "description": "DMS Library, includes varied bundles and components.",
+    "description": "DMS Library, includes various bundles and components.",
     "keywords":    ["symfony", "dms", "standalone"],
     "homepage":    "https://github.com/rdohms/DMS",
     "license":     "MIT",
@@ -14,12 +14,14 @@
     ],
 
     "require": {
-        "php":  ">=5.3.2"
+        "php":  ">=5.3.2",
+        "doctrine/common": ">=2.1"
     },
 
     "autoload": {
         "psr-0": {
-            "DMS": "src/"
+            "DMS": "src/",
+            "Tests": "tests/"
         }
     },
 
