@@ -78,7 +78,7 @@
       });
 
       
-    </script><h1 xmlns:dbx="http://docblox-project.org/xsl/functions" class="file">DMS/Bundles/FilterBundle/DependencyInjection/DMSFilterExtension.php</h1>
+    </script><h1 xmlns:dbx="http://docblox-project.org/xsl/functions" class="file">DMS/Bundles/LauncherBundle/Service/ExportService.php</h1>
 <div xmlns:dbx="http://docblox-project.org/xsl/functions" id="file-nav-box">
 <div id="file-nav-options">
               Show:
@@ -88,7 +88,7 @@
 <ul id="file-nav"><li>
 <a href="#classes"><img src="images/icons/class.png" height="14">
                           Classes
-                      </a><ul><li><a href="#%5CDMS%5CBundles%5CFilterBundle%5CDependencyInjection%5CDMSFilterExtension">\DMS\Bundles\FilterBundle\DependencyInjection\DMSFilterExtension</a></li></ul>
+                      </a><ul><li><a href="#%5CDMS%5CBundles%5CLauncherBundle%5CService%5CExportService">\DMS\Bundles\LauncherBundle\Service\ExportService</a></li></ul>
 </li></ul>
 <div style="clear: left;"></div>
 </div>
@@ -96,24 +96,52 @@
               Table of Contents
           </div>
 </div>
-<a xmlns:dbx="http://docblox-project.org/xsl/functions" name="top" class="anchor"></a><a name="classes" class="anchor"></a><a xmlns:dbx="http://docblox-project.org/xsl/functions" id="\DMS\Bundles\FilterBundle\DependencyInjection\DMSFilterExtension" class="anchor"></a><h2 xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">\DMS\Bundles\FilterBundle\DependencyInjection\DMSFilterExtension<div class="to-top"><a href="#top">jump to top</a></div>
+<a xmlns:dbx="http://docblox-project.org/xsl/functions" name="top" class="anchor"></a><a name="classes" class="anchor"></a><a xmlns:dbx="http://docblox-project.org/xsl/functions" id="\DMS\Bundles\LauncherBundle\Service\ExportService" class="anchor"></a><h2 xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">\DMS\Bundles\LauncherBundle\Service\ExportService<div class="to-top"><a href="#top">jump to top</a></div>
 </h2>
 <div xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">
-<small class="package"><b>Package: </b>Default</small><p class="short-description">This is the class that loads and manages your bundle configuration</p>
-<div class="long-description"><p>To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}</p></div>
-<dl class="class-info">
-<dt>Parent(s)</dt>
-<dd>\Symfony\Component\HttpKernel\DependencyInjection\Extension</dd>
+<small class="package"><b>Package: </b>Default</small><p class="short-description">Export Service</p>
+<div class="long-description"><p>This service gives access to the list of pre-registered users.</p></div>
+<dl class="class-info"></dl>
+<h3>Properties</h3>
+<div>
+<a id="\DMS\Bundles\LauncherBundle\Service\ExportService::$em" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">\Doctrine\ORM\EntityManager
+                 <span class="highlight">$em</span>= ''
+                </code><div class="description">
+<p class="short-description"></p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>\Doctrine\ORM\EntityManager</dd>
 </dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\DMS\Bundles\LauncherBundle\Service\ExportService::$repository" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">\DMS\Bundles\LauncherBundle\Entity\PreUserRepository
+                 <span class="highlight">$repository</span>= ''
+                </code><div class="description">
+<p class="short-description"></p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd><a href="db_DMS_Bundles_LauncherBundle_Entity_PreUserRepository.html#%5CDMS%5CBundles%5CLauncherBundle%5CEntity%5CPreUserRepository">\DMS\Bundles\LauncherBundle\Entity\PreUserRepository</a></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+</div>
 <h3>Methods</h3>
 <div>
-<a id="\DMS\Bundles\FilterBundle\DependencyInjection\DMSFilterExtension::load()" class="anchor"></a><div class="method public">
-<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">load</span><span class="nb-faded-text">(
-           $configs,  $container
+<a id="\DMS\Bundles\LauncherBundle\Service\ExportService::__construct()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__construct</span><span class="nb-faded-text">(
+          \Doctrine\ORM\EntityManager $entityManager
           )
         </span>
         :
-          void</code><div class="description"><p class="short_description">{@inheritDoc}</p></div>
+          void</code><div class="description"><p class="short_description"></p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Parameters</strong><table class="argument-info">
@@ -123,14 +151,31 @@
 <th>Description</th>
 </tr></thead>
 <tr>
-<th>$configs</th>
-<td></td>
+<th>$entityManager</th>
+<td>\Doctrine\ORM\EntityManager</td>
 <td><em></em></td>
 </tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\DMS\Bundles\LauncherBundle\Service\ExportService::exportAllUsers()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">exportAllUsers</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          array</code><div class="description"><p class="short_description">Returns a list of all pre-registered users</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
 <tr>
-<th>$container</th>
+<td>array</td>
 <td></td>
-<td><em></em></td>
 </tr>
 </table>
 </div>
