@@ -78,7 +78,7 @@
       });
 
       
-    </script><h1 xmlns:dbx="http://docblox-project.org/xsl/functions" class="file">DMS/Filter/Rules/Boolean.php</h1>
+    </script><h1 xmlns:dbx="http://docblox-project.org/xsl/functions" class="file">DMS/Filter/Rules/PregReplace.php</h1>
 <div xmlns:dbx="http://docblox-project.org/xsl/functions" id="file-nav-box">
 <div id="file-nav-options">
               Show:
@@ -88,7 +88,7 @@
 <ul id="file-nav"><li>
 <a href="#classes"><img src="images/icons/class.png" height="14">
                           Classes
-                      </a><ul><li><a href="#%5CDMS%5CFilter%5CRules%5CBoolean">\DMS\Filter\Rules\Boolean</a></li></ul>
+                      </a><ul><li><a href="#%5CDMS%5CFilter%5CRules%5CPregReplace">\DMS\Filter\Rules\PregReplace</a></li></ul>
 </li></ul>
 <div style="clear: left;"></div>
 </div>
@@ -96,10 +96,12 @@
               Table of Contents
           </div>
 </div>
-<a xmlns:dbx="http://docblox-project.org/xsl/functions" name="top" class="anchor"></a><a name="classes" class="anchor"></a><a xmlns:dbx="http://docblox-project.org/xsl/functions" id="\DMS\Filter\Rules\Boolean" class="anchor"></a><h2 xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">\DMS\Filter\Rules\Boolean<div class="to-top"><a href="#top">jump to top</a></div>
+<a xmlns:dbx="http://docblox-project.org/xsl/functions" name="top" class="anchor"></a><a name="classes" class="anchor"></a><a xmlns:dbx="http://docblox-project.org/xsl/functions" id="\DMS\Filter\Rules\PregReplace" class="anchor"></a><h2 xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">\DMS\Filter\Rules\PregReplace<div class="to-top"><a href="#top">jump to top</a></div>
 </h2>
 <div xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">
-<small class="package"><b>Package: </b>DMS\Filter</small><p class="short-description">Boolean Rule</p>
+<small class="package"><b>Package: </b>DMS\Filter</small><p class="short-description">PregReplace Rule
+Replaces based on regular expression, will replace with empty if no
+replacement is defined.</p>
 <div class="long-description"></div>
 <dl class="class-info">
 <dt>Parent(s)</dt>
@@ -109,9 +111,40 @@
          
     </dd>
 </dl>
+<h3>Properties</h3>
+<div>
+<a id="\DMS\Filter\Rules\PregReplace::$regexp" class="anchor"></a><div class="property public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public">string
+                 <span class="highlight">$regexp</span>= 'null'
+                </code><div class="description">
+<p class="short-description">Regular Expression to use</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\DMS\Filter\Rules\PregReplace::$replacement" class="anchor"></a><div class="property public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public">string
+                 <span class="highlight">$replacement</span>= '""'
+                </code><div class="description">
+<p class="short-description">Replacement</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Default value</strong><code>""</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+</div>
 <h3>Methods</h3>
 <div>
-<a id="\DMS\Filter\Rules\Boolean::__construct()" class="anchor"></a><div class="method public inherited_from ">
+<a id="\DMS\Filter\Rules\PregReplace::__construct()" class="anchor"></a><div class="method public inherited_from ">
 <a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__construct</span><span class="nb-faded-text">(
           mixed $options
               =
@@ -160,7 +193,7 @@
 </div>
 <div class="clear"></div>
 </div>
-<a id="\DMS\Filter\Rules\Boolean::applyFilter()" class="anchor"></a><div class="method public">
+<a id="\DMS\Filter\Rules\PregReplace::applyFilter()" class="anchor"></a><div class="method public">
 <a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">applyFilter</span><span class="nb-faded-text">(
           mixed $value
           )
@@ -195,17 +228,13 @@ value to be replaced in the original object</p></div>
 </div>
 <div class="clear"></div>
 </div>
-<a id="\DMS\Filter\Rules\Boolean::getDefaultOption()" class="anchor"></a><div class="method public inherited_from ">
+<a id="\DMS\Filter\Rules\PregReplace::getDefaultOption()" class="anchor"></a><div class="method public">
 <a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getDefaultOption</span><span class="nb-faded-text">(
           
           )
         </span>
         :
-          string</code><div class="description">
-<span class="attribute">inherited</span><p class="short_description">Returns the name of the default option</p>
-<small>Inherited from:
-                    <a href="db_DMS_Filter_Rules_Rule.html#%5CDMS%5CFilter%5CRules%5CRule::getDefaultOption()">\DMS\Filter\Rules\Rule::getDefaultOption()</a></small>
-</div>
+          string</code><div class="description"><p class="short_description">Returns the name of the default option</p></div>
 <div class="code-tabs">
 <div class="long-description"><p>Override this method to define a default option.</p></div>
 <strong>Returns</strong><table class="argument-info">
@@ -218,16 +247,10 @@ value to be replaced in the original object</p></div>
 <td></td>
 </tr>
 </table>
-<strong>Details</strong><dl class="function-info">
-<dt>See</dt>
-<dd>\DMS\Filter\Rules\__construct()
-         
-    </dd>
-</dl>
 </div>
 <div class="clear"></div>
 </div>
-<a id="\DMS\Filter\Rules\Boolean::getRequiredOptions()" class="anchor"></a><div class="method public inherited_from ">
+<a id="\DMS\Filter\Rules\PregReplace::getRequiredOptions()" class="anchor"></a><div class="method public inherited_from ">
 <a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getRequiredOptions</span><span class="nb-faded-text">(
           
           )
@@ -259,7 +282,7 @@ value to be replaced in the original object</p></div>
 </div>
 <div class="clear"></div>
 </div>
-<a id="\DMS\Filter\Rules\Boolean::parseOptions()" class="anchor"></a><div class="method private inherited_from ">
+<a id="\DMS\Filter\Rules\PregReplace::parseOptions()" class="anchor"></a><div class="method private inherited_from ">
 <a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private"><span class="highlight">parseOptions</span><span class="nb-faded-text">(
           mixed $options
           )
@@ -298,7 +321,7 @@ for the parsing process</p>
 </div>
 <div class="clear"></div>
 </div>
-<a id="\DMS\Filter\Rules\Boolean::parseOptionsArray()" class="anchor"></a><div class="method private inherited_from ">
+<a id="\DMS\Filter\Rules\PregReplace::parseOptionsArray()" class="anchor"></a><div class="method private inherited_from ">
 <a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private"><span class="highlight">parseOptionsArray</span><span class="nb-faded-text">(
           array $options, <a href="http://php.net/manual/en/class.stdclass.php">\stdClass</a> $result
           )
@@ -331,7 +354,7 @@ for the parsing process</p>
 </div>
 <div class="clear"></div>
 </div>
-<a id="\DMS\Filter\Rules\Boolean::parseSingleOption()" class="anchor"></a><div class="method private inherited_from ">
+<a id="\DMS\Filter\Rules\PregReplace::parseSingleOption()" class="anchor"></a><div class="method private inherited_from ">
 <a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private"><span class="highlight">parseSingleOption</span><span class="nb-faded-text">(
           string $options, <a href="http://php.net/manual/en/class.stdclass.php">\stdClass</a> $result
           )
