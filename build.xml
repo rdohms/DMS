@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="DMS" default="package" basedir=".">
+
+	<property name="distributionDir"  value="${project.basedir}/_distribution" override="true" />
+
+	<target name="docs">
+		<exec command="docblox run -v -d ${project.basedir}/src -t ${project.basedir}/docs --title DMS " />
+	</target>
+
+    <target name="package" description="prepares for packaging">
+        <phingcall target="docs" />
+    </target>
+
+    <!-- Filter Package -->
+    <target name="release_filter" description="Releases a new version">
+        <propertyprompt propertyName="version" defaultValue="invalid-version"
+                        promptText="Which version do you wish to tag? (do not include a 'v')" />
+
+
+        <phingcall target="split_filter" />
+
+        <phingcall target="tag_release">
+            <property name="tagVersion" value="${version}"/>
+            <property name="repoDir" value="Filter" override="true"/>
+        </phingcall>
+
+        <phingcall target="tag_release">
+            <property name="tagVersion" value="${version}"/>
+            <property name="repoDir" value="Bundles/FilterBundle" override="true"/>
+        </phingcall>
+    </target>
+
+	<target name="split_filter" description="Does a Sub-Tree split for Filter (Lib + Package)">
+        <phingcall target="split_repository">
+            <property name="splitTargetDir" value="Filter"/>
+            <property name="splitFilterDir" value="src/DMS/Filter"/>
+            <property name="splitTargetRepo" value="git@github.com:rdohms/DMS-Filter.git"/>
+        </phingcall>
+
+        <phingcall target="split_repository">
+            <property name="splitTargetDir" value="Bundles/FilterBundle" />
+            <property name="splitFilterDir" value="src/DMS/Bundles/FilterBundle" />
+            <property name="splitTargetRepo" value="git@github.com:rdohms/DMSFilterBundle.git" />
+        </phingcall>
+	</target>
+
+    <!-- Laucher Bundle -->
+    <!-- TODO -->
+
+    <!-- Generic Tasks -->
+    <target name="split_repository" description="Does a sub-tree split of selected repository">
+        <property name="targetDir"  value="${distributionDir}/${splitTargetDir}" override="true" />
+
+        <delete dir="${targetDir}" />
+        <exec command="git clone git@github.com:rdohms/DMS.git ${targetDir}" />
+        <exec command="git filter-branch --prune-empty --subdirectory-filter ${splitFilterDir} master" dir="${targetDir}" />
+        <exec command="git remote rm origin" dir="${targetDir}" />
+        <exec command="git remote add origin ${splitTargetRepo}" dir="${targetDir}" />
+        <exec command="git push origin master --force" dir="${targetDir}" />
+    </target>
+
+    <target name="tag_release" description="Creates new release tag in child repository">
+        <property name="targetDir"  value="${distributionDir}/${repoDir}" override="true" />
+
+        <exec command="git tag -a v${tagVersion} -m 'Automated tag for release of v${tagVersion}'" dir="${targetDir}" />
+        <exec command="git push origin v${tagVersion} --force" dir="${targetDir}" />
+    </target>
+</project>
