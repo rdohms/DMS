@@ -24,5 +24,8 @@ class DMSFilterExtension extends Extension
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
+
+        var_dump($config);
+        $container->setParameter('dms_filter.auto_filter_forms', $config['auto_filter_forms']);
     }
 }
