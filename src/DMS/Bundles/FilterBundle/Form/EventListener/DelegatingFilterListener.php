@@ -33,7 +33,8 @@ class DelegatingFilterListener implements EventSubscriberInterface
     static public function getSubscribedEvents()
     {
         return array(
-            FormEvents::POST_BIND        => "onPostBind",
+            FormEvents::POST_BIND => array("onPostBind", 1024),
+            FormEvents::BIND_NORM_DATA => array("onPostBind", 1024),
         );
     }
 
@@ -44,12 +45,15 @@ class DelegatingFilterListener implements EventSubscriberInterface
      */
     public function onPostBind($event)
     {
+        $form = $event->getForm();
+
+        if ( ! $form->isRoot()) return;
 
         $clientData = $event->getForm()->getClientData();
 
-        if (is_object($clientData)) {
-            $this->filterService->filterEntity($clientData);
-        }
+        if ( ! is_object($clientData)) return;
+
+        $this->filterService->filterEntity($clientData);
 
     }
 }
