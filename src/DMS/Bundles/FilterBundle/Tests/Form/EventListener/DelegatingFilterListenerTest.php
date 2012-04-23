@@ -9,7 +9,7 @@ use Symfony\Component\Form\FormError;
 use Symfony\Component\Form\Util\PropertyPath;
 use DMS\Bundles\FilterBundle\Form\EventListener\DelegatingFilterListener;
 use DMS\Bundles\FilterBundle\Service\Filter;
-use Tests\Dummy\Classes\AnnotatedClass;
+use DMS\Bundles\FilterBundle\Tests\Dummy\AnnotatedClass;
 use Symfony\Component\Form\FormEvents;
 
 class DelegatingFilterListenerTest extends \PHPUnit_Framework_TestCase
