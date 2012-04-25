@@ -6,17 +6,9 @@ This bundle makes DMS/Filter available for use in your application for input fil
 
 ### 1. Import libraries
 
-Option A) Use the vendors script.
+Option A) Use Composer.
 
-Add this to the `deps` file.
-
-	[DMSFilterBundle]
-	    git=https://github.com/rdohms/DMSFilterBundle.git
-	    target=/bundles/DMS/Bundles/FilterBundle
-	
-    [DMSFilter]
-        git=https://github.com/rdohms/DMS-Filter.git
-        target=/DMS/Filter
+Add `dms/dms-filter-bundle` to the `composer.json` file.
 
 Option B) Use submodules
 
@@ -24,40 +16,24 @@ Option B) Use submodules
     git submodule add https://github.com/rdohms/DMS-Filter.git /DMS/Filter
     git submodule update --init
 
-### 2. Prepare the autoloader
-
-Add this to `autoload.php`
-
-	'DMS' => __DIR__.'/../src',
-
-### 3. Enable Bundle
+### 2. Enable Bundle
 
 Add this to your `AppKernel.php`
 
 	new DMS\Bundles\FilterBundle\DMSFilterBundle(),
 
-### 4. Configure
+### 3. Configure
 
-...
+This bundle can now automatically filter your forms if it finds a annotated entity attached.
+
+This is the default behaviour, if you want to disable it add this to your `config.yml`
+
+    dms_filter:
+        auto_filter_forms: false
 
 ## Usage
 
-Use the `dms.filter` service along with annotations in the Entity to filter data.
-
-	public function indexAction()
-	{
-        
-	    $entity = new \Acme\DemoBundle\Entity\SampleEntity();
-	    $entity->name = "My <b>name</b>";
-	    $entity->email = " email@mail.com";
-        
-	    $oldEntity = clone $entity;
-        
-	    $filterService = $this->get('dms.filter');
-	    $filterService->filterEntity($entity);
-        
-	    return array('entity' => $entity, "old" => $oldEntity);
-	}
+### Adding Annotations
 
 To add annotations to your entity, import the namespace and add them like this:
 
@@ -79,7 +55,7 @@ To add annotations to your entity, import the namespace and add them like this:
 		* @var string
 		*/
 		public $name;
-	
+
 		/**
 		* @Filter\StripTags()
 		* @Filter\Trim()
@@ -89,4 +65,27 @@ To add annotations to your entity, import the namespace and add them like this:
 		*/
 		public $email;
 
-	}    
+	}
+
+### Manual Filtering
+
+Use the `dms.filter` service along with annotations in the Entity to filter data.
+
+	public function indexAction()
+	{
+
+	    $entity = new \Acme\DemoBundle\Entity\SampleEntity();
+	    $entity->name = "My <b>name</b>";
+	    $entity->email = " email@mail.com";
+
+	    $oldEntity = clone $entity;
+
+	    $filterService = $this->get('dms.filter');
+	    $filterService->filterEntity($entity);
+
+	    return array('entity' => $entity, "old" => $oldEntity);
+	}
+
+### Auto filtering
+
+This bundle can now automatically filter your forms if it finds a annotated entity attached. If enabled entities will be filtered before they are validated.
