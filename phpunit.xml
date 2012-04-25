@@ -7,17 +7,17 @@
 		</testsuite>
 		<testsuite name="Filter">
 			<directory>tests/DMS/Filter</directory>
+			<directory>src/DMS/Bundles/FilterBundle/Tests</directory>
 		</testsuite>
 	</testsuites>
 
 	<filter>
 		<whitelist>
-			<directory suffix=".php">src/DMS/Filter</directory>
+			<directory suffix=".php">src/DMS</directory>
 		</whitelist>
         <blacklist>
             <directory>tests</directory>
             <directory>vendor</directory>
-            <directory>src/DMS/Bundles</directory>
         </blacklist>
 	</filter>
 

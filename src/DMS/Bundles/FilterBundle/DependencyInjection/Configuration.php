@@ -20,6 +20,8 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('dms_filter');
 
+        $rootNode->children()->booleanNode('auto_filter_forms')->defaultValue(true);
+
         // Here you should define the parameters that are allowed to
         // configure your bundle. See the documentation linked above for
         // more information on that topic.
