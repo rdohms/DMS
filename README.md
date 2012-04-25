@@ -10,7 +10,7 @@ Status: [![Build Status](https://secure.travis-ci.org/rdohms/DMS.png?branch=mast
 
 The filter library is a standalone annotation based filter library for entities, it works very well alongside Symfony's Validator library.
 
-## Bundles
+## Bundle
 
 ### Filter Bundle
 

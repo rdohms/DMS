@@ -26,7 +26,7 @@
 
         <phingcall target="tag_release">
             <property name="tagVersion" value="${version}"/>
-            <property name="repoDir" value="Bundles/FilterBundle" override="true"/>
+            <property name="repoDir" value="Bundle/FilterBundle" override="true"/>
         </phingcall>
     </target>
 
@@ -38,8 +38,8 @@
         </phingcall>
 
         <phingcall target="split_repository">
-            <property name="splitTargetDir" value="Bundles/FilterBundle" />
-            <property name="splitFilterDir" value="src/DMS/Bundles/FilterBundle" />
+            <property name="splitTargetDir" value="Bundle/FilterBundle" />
+            <property name="splitFilterDir" value="src/DMS/Bundle/FilterBundle" />
             <property name="splitTargetRepo" value="git@github.com:rdohms/DMSFilterBundle.git" />
         </phingcall>
 	</target>
