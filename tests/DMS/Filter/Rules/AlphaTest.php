@@ -4,7 +4,7 @@ namespace DMS\Filter\Rules;
 
 use Tests;
 
-class AlnumTest extends Tests\Testcase
+class AlphaTest extends Tests\Testcase
 {
 
     public function setUp()
@@ -22,7 +22,7 @@ class AlnumTest extends Tests\Testcase
      */
     public function testRule($options, $value, $expectedResult, $unicodeSetting = null)
     {
-        $rule = new Alnum($options);
+        $rule = new Alpha($options);
 
         if ($unicodeSetting !== null) {
 
@@ -46,10 +46,10 @@ class AlnumTest extends Tests\Testcase
             array(true, "My Text", "My Text", false),
             array(true, "My Text!", "My Text", true),
             array(true, "My Text!", "My Text", false),
-            array(true, "My Text21!", "My Text21", true),
-            array(true, "My Text21!", "My Text21", false),
-            array(true, "João Sorrisão", "João Sorrisão", true),
-            array(true, "João Sorrisão", "Joo Sorriso", false),
+            array(true, "My Text21!", "My Text", true),
+            array(true, "My Text21!", "My Text", false),
+            array(true, "João 2Sorrisão", "João Sorrisão", true),
+            array(true, "João 2Sorrisão", "Joo Sorriso", false),
             array(true, "Helgi Þormar Þorbjörnsson", "Helgi Þormar Þorbjörnsson", true),
             array(true, "Helgi Þormar Þorbjörnsson", "Helgi ormar orbjrnsson", false),
             array(true, "Helgi Þormar!@#$&*( )(*&%$#@Þorbjörnsson", "Helgi Þormar Þorbjörnsson", true),
