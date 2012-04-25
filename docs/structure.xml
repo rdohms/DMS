@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project version="0.18.1" title="DMS">
-  <file path="DMS/Bundles/FilterBundle/DependencyInjection/Configuration.php" hash="a58c6f986ac98e3897581c534922b6a2">
+  <file path="DMS/Bundle/FilterBundle/DependencyInjection/Configuration.php" hash="b6c3a27c39cb65b8369747cb787a6752">
     <parse_markers>
-      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundles/FilterBundle/DependencyInjection/Configuration.php</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundle/FilterBundle/DependencyInjection/Configuration.php</error>
     </parse_markers>
     <namespace-alias name="TreeBuilder">Symfony\Component\Config\Definition\Builder\TreeBuilder</namespace-alias>
     <namespace-alias name="ConfigurationInterface">Symfony\Component\Config\Definition\ConfigurationInterface</namespace-alias>
-    <class final="false" abstract="false" namespace="DMS\Bundles\FilterBundle\DependencyInjection" line="13" package="Default">
+    <class final="false" abstract="false" namespace="DMS\Bundle\FilterBundle\DependencyInjection" line="13" package="Default">
       <name>Configuration</name>
-      <full_name>\DMS\Bundles\FilterBundle\DependencyInjection\Configuration</full_name>
+      <full_name>\DMS\Bundle\FilterBundle\DependencyInjection\Configuration</full_name>
       <extends/>
       <extends>\Symfony\Component\Config\Definition\ConfigurationInterface</extends>
       <docblock line="8">
         <description><![CDATA[This is the class that validates and merges configuration from your app/config files]]></description>
         <long-description><![CDATA[<p>To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html#cookbook-bundles-extension-config-class}</p>]]></long-description>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\FilterBundle\DependencyInjection" line="18" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\FilterBundle\DependencyInjection" line="18" package="Default">
         <name>getConfigTreeBuilder</name>
         <type>function</type>
         <docblock line="15">
@@ -25,25 +25,25 @@
       </method>
     </class>
   </file>
-  <file path="DMS/Bundles/FilterBundle/DependencyInjection/DMSFilterExtension.php" hash="8ac137ec3cf30f041a78bbaae88b1b1c">
+  <file path="DMS/Bundle/FilterBundle/DependencyInjection/DMSFilterExtension.php" hash="7d3dcac1e612a93fad8a8d4dfb2d40bf">
     <parse_markers>
       <error line="17" code="50015">Argument $configs is missing from the Docblock of load()</error>
       <error line="17" code="50015">Argument $container is missing from the Docblock of load()</error>
-      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundles/FilterBundle/DependencyInjection/DMSFilterExtension.php</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundle/FilterBundle/DependencyInjection/DMSFilterExtension.php</error>
     </parse_markers>
     <namespace-alias name="ContainerBuilder">Symfony\Component\DependencyInjection\ContainerBuilder</namespace-alias>
     <namespace-alias name="FileLocator">Symfony\Component\Config\FileLocator</namespace-alias>
     <namespace-alias name="Extension">Symfony\Component\HttpKernel\DependencyInjection\Extension</namespace-alias>
     <namespace-alias name="Loader">Symfony\Component\DependencyInjection\Loader</namespace-alias>
-    <class final="false" abstract="false" namespace="DMS\Bundles\FilterBundle\DependencyInjection" line="15" package="Default">
+    <class final="false" abstract="false" namespace="DMS\Bundle\FilterBundle\DependencyInjection" line="15" package="Default">
       <name>DMSFilterExtension</name>
-      <full_name>\DMS\Bundles\FilterBundle\DependencyInjection\DMSFilterExtension</full_name>
+      <full_name>\DMS\Bundle\FilterBundle\DependencyInjection\DMSFilterExtension</full_name>
       <extends>\Symfony\Component\HttpKernel\DependencyInjection\Extension</extends>
       <docblock line="10">
         <description><![CDATA[This is the class that loads and manages your bundle configuration]]></description>
         <long-description><![CDATA[<p>To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}</p>]]></long-description>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\FilterBundle\DependencyInjection" line="20" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\FilterBundle\DependencyInjection" line="20" package="Default">
         <name>load</name>
         <type>function</type>
         <docblock line="17">
@@ -63,39 +63,286 @@
       </method>
     </class>
   </file>
-  <file path="DMS/Bundles/FilterBundle/DMSFilterBundle.php" hash="b3618a5f3317e9a3a9b58f9b53eee3b0">
+  <file path="DMS/Bundle/FilterBundle/DMSFilterBundle.php" hash="309e01fb3a151842f76005da1c5dd987">
     <parse_markers>
-      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundles/FilterBundle/DMSFilterBundle.php</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundle/FilterBundle/DMSFilterBundle.php</error>
     </parse_markers>
     <namespace-alias name="Bundle">Symfony\Component\HttpKernel\Bundle\Bundle</namespace-alias>
-    <class final="false" abstract="false" namespace="DMS\Bundles\FilterBundle" line="17" package="DMS\Bundles">
+    <class final="false" abstract="false" namespace="DMS\Bundle\FilterBundle" line="17" package="DMS\Bundle">
       <name>DMSFilterBundle</name>
-      <full_name>\DMS\Bundles\FilterBundle\DMSFilterBundle</full_name>
+      <full_name>\DMS\Bundle\FilterBundle\DMSFilterBundle</full_name>
       <extends>\Symfony\Component\HttpKernel\Bundle\Bundle</extends>
       <docblock line="7">
         <description><![CDATA[DMS Filter Bundle]]></description>
-        <long-description><![CDATA[<p>This Bundle makes DMS/Filter available to Symfony
-Applications in a very easy way.</p>]]></long-description>
+        <long-description><![CDATA[<p>This Bundle makes DMS/Filter available to Symfony 2 Applications in a very
+easy way.</p>]]></long-description>
         <tag line="7" name="author" description="Rafael Dohms &lt;code@doh.ms&gt;"/>
         <tag line="7" name="package" description="DMS"/>
-        <tag line="7" name="subpackage" description="Bundles"/>
+        <tag line="7" name="subpackage" description="Bundle"/>
       </docblock>
     </class>
   </file>
-  <file path="DMS/Bundles/FilterBundle/Service/Filter.php" hash="65c56cb7fafe7a007fad03af4dffadfc">
+  <file path="DMS/Bundle/FilterBundle/Form/EventListener/DelegatingFilterListener.php" hash="51a5464324f82eb33e7bb533ede0f0b6">
+    <parse_markers>
+      <critical line="17" code="50019">No short description for property $filterService</critical>
+      <error line="22" code="50012">No short description for method __construct()</error>
+      <error line="22" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $filterService in __construct()</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundle/FilterBundle/Form/EventListener/DelegatingFilterListener.php</error>
+    </parse_markers>
+    <namespace-alias name="FormEvents">Symfony\Component\Form\FormEvents</namespace-alias>
+    <namespace-alias name="FilterDataEvent">Symfony\Component\Form\Event\FilterDataEvent</namespace-alias>
+    <namespace-alias name="EventSubscriberInterface">Symfony\Component\EventDispatcher\EventSubscriberInterface</namespace-alias>
+    <namespace-alias name="Filter">DMS\Bundle\FilterBundle\Service\Filter</namespace-alias>
+    <class final="false" abstract="false" namespace="DMS\Bundle\FilterBundle\Form\EventListener" line="15" package="Default">
+      <name>DelegatingFilterListener</name>
+      <full_name>\DMS\Bundle\FilterBundle\Form\EventListener\DelegatingFilterListener</full_name>
+      <extends/>
+      <extends>\Symfony\Component\EventDispatcher\EventSubscriberInterface</extends>
+      <docblock line="9">
+        <description><![CDATA[Delegating Filter Listener]]></description>
+        <long-description><![CDATA[<p>This subscriber listens to form events to automatically run filtering
+on the attached entity, like Validation is done.</p>]]></long-description>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="20" package="Default">
+        <name>$filterService</name>
+        <default><![CDATA[]]></default>
+        <docblock line="17">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="17" name="var" description="" type="\DMS\Bundle\FilterBundle\Service\Filter">
+            <type by_reference="false">\DMS\Bundle\FilterBundle\Service\Filter</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\FilterBundle\Form\EventListener" line="25" package="Default">
+        <name>__construct</name>
+        <type>function</type>
+        <docblock line="22">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="22" name="param" description="" type="\DMS\Bundle\FilterBundle\Service\Filter" variable="$filterService">
+            <type by_reference="false">\DMS\Bundle\FilterBundle\Service\Filter</type>
+          </tag>
+        </docblock>
+        <argument line="25">
+          <name>$filterService</name>
+          <default><![CDATA[]]></default>
+          <type>Filter</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="DMS\Bundle\FilterBundle\Form\EventListener" line="33" package="Default">
+        <name>getSubscribedEvents</name>
+        <type>function</type>
+        <docblock line="30">
+          <description><![CDATA[{@inheritdoc}]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\FilterBundle\Form\EventListener" line="46" package="Default">
+        <name>onPostBind</name>
+        <type>function</type>
+        <docblock line="41">
+          <description><![CDATA[Listens to the Post Bind event and triggers filtering if adequate.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="41" name="param" description="" type="\Symfony\Component\Form\Event\FilterDataEvent" variable="$event">
+            <type by_reference="false">\Symfony\Component\Form\Event\FilterDataEvent</type>
+          </tag>
+        </docblock>
+        <argument line="46">
+          <name>$event</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="DMS/Bundle/FilterBundle/Form/FilterExtension.php" hash="c55934baa830a4ed382538c8b7f2f4a1">
+    <parse_markers>
+      <critical line="17" code="50019">No short description for property $filter</critical>
+      <critical line="22" code="50019">No short description for property $autoFilter</critical>
+      <error line="27" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $filterService in __construct()</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundle/FilterBundle/Form/FilterExtension.php</error>
+    </parse_markers>
+    <namespace-alias name="Type">Symfony\Component\Form\Extension\Validator\Type</namespace-alias>
+    <namespace-alias name="AbstractExtension">Symfony\Component\Form\AbstractExtension</namespace-alias>
+    <namespace-alias name="Filter">DMS\Bundle\FilterBundle\Service\Filter</namespace-alias>
+    <namespace-alias name="FormTypeFilterExtension">DMS\Bundle\FilterBundle\Form\Type\FormTypeFilterExtension</namespace-alias>
+    <class final="false" abstract="false" namespace="DMS\Bundle\FilterBundle\Form" line="15" package="Default">
+      <name>FilterExtension</name>
+      <full_name>\DMS\Bundle\FilterBundle\Form\FilterExtension</full_name>
+      <extends>\Symfony\Component\Form\AbstractExtension</extends>
+      <docblock line="10">
+        <description><![CDATA[Filter Extension]]></description>
+        <long-description><![CDATA[<p>Enabled filtering in forms</p>]]></long-description>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="20" package="Default">
+        <name>$filter</name>
+        <default><![CDATA[]]></default>
+        <docblock line="17">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="17" name="var" description="" type="\DMS\Bundle\FilterBundle\Service\Filter">
+            <type by_reference="false">\DMS\Bundle\FilterBundle\Service\Filter</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="25" package="Default">
+        <name>$autoFilter</name>
+        <default><![CDATA[]]></default>
+        <docblock line="22">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="22" name="var" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\FilterBundle\Form" line="33" package="Default">
+        <name>__construct</name>
+        <type>function</type>
+        <docblock line="27">
+          <description><![CDATA[{@inheritdoc}]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="27" name="param" description="" type="\DMS\Bundle\FilterBundle\Service\Filter" variable="$filterService">
+            <type by_reference="false">\DMS\Bundle\FilterBundle\Service\Filter</type>
+          </tag>
+          <tag line="27" name="param" description="" type="boolean" variable="$autoFilter">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="33">
+          <name>$filterService</name>
+          <default><![CDATA[]]></default>
+          <type>Filter</type>
+        </argument>
+        <argument line="33">
+          <name>$autoFilter</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="DMS\Bundle\FilterBundle\Form" line="42" package="Default">
+        <name>loadTypeExtensions</name>
+        <type>function</type>
+        <docblock line="39">
+          <description><![CDATA[{@inheritdoc}]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="DMS/Bundle/FilterBundle/Form/Type/FormTypeFilterExtension.php" hash="aef169543f84401405521813871fa2db">
+    <parse_markers>
+      <critical line="18" code="50019">No short description for property $filterService</critical>
+      <critical line="23" code="50019">No short description for property $autoFilter</critical>
+      <error line="28" code="50012">No short description for method __construct()</error>
+      <error line="28" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $filterService in __construct()</error>
+      <error line="38" code="50015">Argument $builder is missing from the Docblock of buildForm()</error>
+      <error line="38" code="50015">Argument $options is missing from the Docblock of buildForm()</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundle/FilterBundle/Form/Type/FormTypeFilterExtension.php</error>
+    </parse_markers>
+    <namespace-alias name="AbstractTypeExtension">Symfony\Component\Form\AbstractTypeExtension</namespace-alias>
+    <namespace-alias name="FormBuilder">Symfony\Component\Form\FormBuilder</namespace-alias>
+    <namespace-alias name="Filter">DMS\Bundle\FilterBundle\Service\Filter</namespace-alias>
+    <namespace-alias name="DelegatingFilterListener">DMS\Bundle\FilterBundle\Form\EventListener\DelegatingFilterListener</namespace-alias>
+    <class final="false" abstract="false" namespace="DMS\Bundle\FilterBundle\Form\Type" line="16" package="Default">
+      <name>FormTypeFilterExtension</name>
+      <full_name>\DMS\Bundle\FilterBundle\Form\Type\FormTypeFilterExtension</full_name>
+      <extends>\Symfony\Component\Form\AbstractTypeExtension</extends>
+      <docblock line="9">
+        <description><![CDATA[Form Type Filter Extension]]></description>
+        <long-description><![CDATA[<p>Extends the Form Type and adds auto filtering to it.
+It checks the dms_filter.auto_filter_forms parameter to see if it should or
+not enable auto filtering.</p>]]></long-description>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="21" package="Default">
+        <name>$filterService</name>
+        <default><![CDATA[]]></default>
+        <docblock line="18">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="18" name="var" description="" type="\DMS\Bundle\FilterBundle\Service\Filter">
+            <type by_reference="false">\DMS\Bundle\FilterBundle\Service\Filter</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="26" package="Default">
+        <name>$autoFilter</name>
+        <default><![CDATA[]]></default>
+        <docblock line="23">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="23" name="var" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\FilterBundle\Form\Type" line="32" package="Default">
+        <name>__construct</name>
+        <type>function</type>
+        <docblock line="28">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="28" name="param" description="" type="\DMS\Bundle\FilterBundle\Service\Filter" variable="$filterService">
+            <type by_reference="false">\DMS\Bundle\FilterBundle\Service\Filter</type>
+          </tag>
+          <tag line="28" name="param" description="" type="boolean" variable="$autoFilter">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="32">
+          <name>$filterService</name>
+          <default><![CDATA[]]></default>
+          <type>Filter</type>
+        </argument>
+        <argument line="32">
+          <name>$autoFilter</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\FilterBundle\Form\Type" line="41" package="Default">
+        <name>buildForm</name>
+        <type>function</type>
+        <docblock line="38">
+          <description><![CDATA[{@inheritdoc}]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+        <argument line="41">
+          <name>$builder</name>
+          <default><![CDATA[]]></default>
+          <type>FormBuilder</type>
+        </argument>
+        <argument line="41">
+          <name>$options</name>
+          <default><![CDATA[]]></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\FilterBundle\Form\Type" line="51" package="Default">
+        <name>getExtendedType</name>
+        <type>function</type>
+        <docblock line="48">
+          <description><![CDATA[{@inheritdoc}]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="DMS/Bundle/FilterBundle/Service/Filter.php" hash="92ad05e132b205c793a0fdc790b179d7">
     <parse_markers>
       <critical line="16" code="50019">No short description for property $filterExecutor</critical>
-      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundles/FilterBundle/Service/Filter.php</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundle/FilterBundle/Service/Filter.php</error>
     </parse_markers>
-    <class final="false" abstract="false" namespace="DMS\Bundles\FilterBundle\Service" line="13" package="DMS\Bundles">
+    <class final="false" abstract="false" namespace="DMS\Bundle\FilterBundle\Service" line="13" package="DMS\Bundle">
       <name>Filter</name>
-      <full_name>\DMS\Bundles\FilterBundle\Service\Filter</full_name>
+      <full_name>\DMS\Bundle\FilterBundle\Service\Filter</full_name>
       <extends/>
       <docblock line="5">
         <description><![CDATA[Filter Service]]></description>
         <long-description><![CDATA[<p>Provides filtering result based on annotation in the class.</p>]]></long-description>
         <tag line="5" name="package" description="DMS"/>
-        <tag line="5" name="subpackage" description="Bundles"/>
+        <tag line="5" name="subpackage" description="Bundle"/>
       </docblock>
       <property final="false" static="false" visibility="private" line="19" package="Default">
         <name>$filterExecutor</name>
@@ -108,7 +355,7 @@ Applications in a very easy way.</p>]]></long-description>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\FilterBundle\Service" line="24" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\FilterBundle\Service" line="24" package="Default">
         <name>__construct</name>
         <type>function</type>
         <docblock line="21">
@@ -116,80 +363,398 @@ Applications in a very easy way.</p>]]></long-description>
           <long-description><![CDATA[]]></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\FilterBundle\Service" line="46" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\FilterBundle\Service" line="45" package="Default">
         <name>filterEntity</name>
         <type>function</type>
-        <docblock line="41">
+        <docblock line="40">
           <description><![CDATA[Filter an object based on its annotations]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="41" name="param" description="" type="object" variable="$object">
+          <tag line="40" name="param" description="" type="object" variable="$object">
             <type by_reference="false">object</type>
           </tag>
         </docblock>
-        <argument line="46">
+        <argument line="45">
           <name>$object</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\FilterBundle\Service" line="56" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\FilterBundle\Service" line="56" package="Default">
+        <name>filterProperty</name>
+        <type>function</type>
+        <docblock line="50">
+          <description><![CDATA[Filters only a selected property of an entity]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="50" name="param" description="" type="object" variable="$object">
+            <type by_reference="false">object</type>
+          </tag>
+          <tag line="50" name="param" description="" type="string" variable="$property">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="56">
+          <name>$object</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="56">
+          <name>$property</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\FilterBundle\Service" line="70" package="Default">
+        <name>filterValue</name>
+        <type>function</type>
+        <docblock line="61">
+          <description><![CDATA[Runs a given value through one or more filter rules returning the
+filtered value]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="61" name="param" description="" type="mixed" variable="$value">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="61" name="param" description="" type="\DMS\Filter\Rules\Rule[]|\DMS\Filter\Rules\Rule" variable="$filter">
+            <type by_reference="false">\DMS\Filter\Rules\Rule[]</type>
+            <type by_reference="false">\DMS\Filter\Rules\Rule</type>
+          </tag>
+          <tag line="61" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="70">
+          <name>$value</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="70">
+          <name>$filter</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\FilterBundle\Service" line="80" package="Default">
         <name>getFilterExecutor</name>
         <type>function</type>
-        <docblock line="51">
+        <docblock line="75">
           <description><![CDATA[Retrieve the actual filter executor instance]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="51" name="return" description="" type="\DMS\Filter\Filter">
+          <tag line="75" name="return" description="" type="\DMS\Filter\Filter">
             <type by_reference="false">\DMS\Filter\Filter</type>
           </tag>
         </docblock>
       </method>
     </class>
   </file>
-  <file path="DMS/Bundles/FilterBundle/Tests/bootstrap.php" hash="bc379ccbea75e509cc4f5ea2a4ade404">
+  <file path="DMS/Bundle/FilterBundle/Tests/Dummy/AnnotatedClass.php" hash="fd8c0b4b999af7d01d77ffc988ebda10">
     <parse_markers>
-      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundles/FilterBundle/Tests/bootstrap.php</error>
+      <critical line="9" code="50019">No short description for property $name</critical>
+      <critical line="16" code="50019">No short description for property $nickname</critical>
+      <critical line="23" code="50019">No short description for property $description</critical>
+      <error line="7" code="50000">No DocBlock was found for AnnotatedClass</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundle/FilterBundle/Tests/Dummy/AnnotatedClass.php</error>
     </parse_markers>
-    <include line="3" type="Include">
-      <name>/../../../../../app/bootstrap.php.cache</name>
-    </include>
+    <namespace-alias name="Filter">DMS\Filter\Rules</namespace-alias>
+    <class final="false" abstract="false" namespace="DMS\Bundle\FilterBundle\Tests\Dummy" line="7">
+      <name>AnnotatedClass</name>
+      <full_name>\DMS\Bundle\FilterBundle\Tests\Dummy\AnnotatedClass</full_name>
+      <extends/>
+      <property final="false" static="false" visibility="public" line="14" package="Default">
+        <name>$name</name>
+        <default><![CDATA[]]></default>
+        <docblock line="9">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="9" name="Filter\StripTags" description="()"/>
+          <tag line="9" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="21" package="Default">
+        <name>$nickname</name>
+        <default><![CDATA[]]></default>
+        <docblock line="16">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="16" name="Filter\StripTags" description="()"/>
+          <tag line="16" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="28" package="Default">
+        <name>$description</name>
+        <default><![CDATA[]]></default>
+        <docblock line="23">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="23" name="Filter\StripTags" description="(&quot;&lt;b&gt;&lt;i&gt;&quot;)"/>
+          <tag line="23" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+    </class>
   </file>
-  <file path="DMS/Bundles/FilterBundle/Tests/Service/FilterTest.php" hash="45862eb7c717674e8656ef86d223209b">
+  <file path="DMS/Bundle/FilterBundle/Tests/Form/EventListener/DelegatingFilterListenerTest.php" hash="424943978e7c76f86772e03a814351a9">
     <parse_markers>
-      <error line="9" code="50010">No DocBlock was found for method testLoadFilterTest()</error>
-      <error line="7" code="50000">No DocBlock was found for FilterTest</error>
-      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundles/FilterBundle/Tests/Service/FilterTest.php</error>
+      <error line="17" code="50018">No DocBlock was found for property $dispatcher</error>
+      <error line="19" code="50018">No DocBlock was found for property $factory</error>
+      <error line="21" code="50018">No DocBlock was found for property $builder</error>
+      <critical line="23" code="50019">No short description for property $delegate</critical>
+      <critical line="28" code="50019">No short description for property $listener</critical>
+      <error line="33" code="50018">No DocBlock was found for property $message</error>
+      <error line="35" code="50018">No DocBlock was found for property $params</error>
+      <error line="37" code="50010">No DocBlock was found for method setUp()</error>
+      <error line="52" code="50010">No DocBlock was found for method getMockGraphWalker()</error>
+      <error line="59" code="50010">No DocBlock was found for method getMockMetadataFactory()</error>
+      <error line="64" code="50010">No DocBlock was found for method getMockTransformer()</error>
+      <error line="69" code="50010">No DocBlock was found for method getExecutionContext()</error>
+      <error line="78" code="50010">No DocBlock was found for method getConstraintViolation()</error>
+      <error line="83" code="50010">No DocBlock was found for method getFormError()</error>
+      <error line="88" code="50010">No DocBlock was found for method getBuilder()</error>
+      <error line="98" code="50010">No DocBlock was found for method getForm()</error>
+      <error line="103" code="50010">No DocBlock was found for method getMockForm()</error>
+      <error line="108" code="50010">No DocBlock was found for method testFilterIgnoresNonRoot()</error>
+      <error line="121" code="50010">No DocBlock was found for method testFilterIgnoresNoObject()</error>
+      <error line="139" code="50010">No DocBlock was found for method testFilterOnPostBind()</error>
+      <error line="158" code="50010">No DocBlock was found for method testAssertEventsBinding()</error>
+      <error line="15" code="50000">No DocBlock was found for DelegatingFilterListenerTest</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundle/FilterBundle/Tests/Form/EventListener/DelegatingFilterListenerTest.php</error>
     </parse_markers>
-    <namespace-alias name="WebTestCase">Symfony\Bundle\FrameworkBundle\Test\WebTestCase</namespace-alias>
-    <class final="false" abstract="false" namespace="DMS\Bundles\FilterBundle\Tests\Service" line="7">
-      <name>FilterTest</name>
-      <full_name>\DMS\Bundles\FilterBundle\Tests\Service\FilterTest</full_name>
-      <extends>\Symfony\Bundle\FrameworkBundle\Test\WebTestCase</extends>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\FilterBundle\Tests\Service" line="9">
-        <name>testLoadFilterTest</name>
+    <namespace-alias name="DataEvent">Symfony\Component\Form\Event\DataEvent</namespace-alias>
+    <namespace-alias name="FormInterface">Symfony\Component\Form\FormInterface</namespace-alias>
+    <namespace-alias name="FormBuilder">Symfony\Component\Form\FormBuilder</namespace-alias>
+    <namespace-alias name="FormError">Symfony\Component\Form\FormError</namespace-alias>
+    <namespace-alias name="PropertyPath">Symfony\Component\Form\Util\PropertyPath</namespace-alias>
+    <namespace-alias name="DelegatingFilterListener">DMS\Bundle\FilterBundle\Form\EventListener\DelegatingFilterListener</namespace-alias>
+    <namespace-alias name="Filter">DMS\Bundle\FilterBundle\Service\Filter</namespace-alias>
+    <namespace-alias name="AnnotatedClass">DMS\Bundle\FilterBundle\Tests\Dummy\AnnotatedClass</namespace-alias>
+    <namespace-alias name="FormEvents">Symfony\Component\Form\FormEvents</namespace-alias>
+    <class final="false" abstract="false" namespace="DMS\Bundle\FilterBundle\Tests\Form\EventListener" line="15">
+      <name>DelegatingFilterListenerTest</name>
+      <full_name>\DMS\Bundle\FilterBundle\Tests\Form\EventListener\DelegatingFilterListenerTest</full_name>
+      <extends>\PHPUnit_Framework_TestCase</extends>
+      <property final="false" static="false" visibility="private" line="17">
+        <name>$dispatcher</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="19">
+        <name>$factory</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="21">
+        <name>$builder</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="26" package="Default">
+        <name>$delegate</name>
+        <default><![CDATA[]]></default>
+        <docblock line="23">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="23" name="var" description="| Filter" type="\PHPUnit_Framework_MockObject_MockObject">
+            <type by_reference="false">\PHPUnit_Framework_MockObject_MockObject</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="31" package="Default">
+        <name>$listener</name>
+        <default><![CDATA[]]></default>
+        <docblock line="28">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="28" name="var" description="" type="\DMS\Bundle\FilterBundle\Form\EventListener\DelegatingFilterListener">
+            <type by_reference="false">\DMS\Bundle\FilterBundle\Form\EventListener\DelegatingFilterListener</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="33">
+        <name>$message</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="35">
+        <name>$params</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="DMS\Bundle\FilterBundle\Tests\Form\EventListener" line="37">
+        <name>setUp</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="DMS\Bundle\FilterBundle\Tests\Form\EventListener" line="52">
+        <name>getMockGraphWalker</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="DMS\Bundle\FilterBundle\Tests\Form\EventListener" line="59">
+        <name>getMockMetadataFactory</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="DMS\Bundle\FilterBundle\Tests\Form\EventListener" line="64">
+        <name>getMockTransformer</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="DMS\Bundle\FilterBundle\Tests\Form\EventListener" line="69">
+        <name>getExecutionContext</name>
+        <type>function</type>
+        <argument line="69">
+          <name>$propertyPath</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="DMS\Bundle\FilterBundle\Tests\Form\EventListener" line="78">
+        <name>getConstraintViolation</name>
+        <type>function</type>
+        <argument line="78">
+          <name>$propertyPath</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="DMS\Bundle\FilterBundle\Tests\Form\EventListener" line="83">
+        <name>getFormError</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="DMS\Bundle\FilterBundle\Tests\Form\EventListener" line="88">
+        <name>getBuilder</name>
+        <type>function</type>
+        <argument line="88">
+          <name>$name</name>
+          <default><![CDATA['name']]></default>
+          <type/>
+        </argument>
+        <argument line="88">
+          <name>$propertyPath</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="DMS\Bundle\FilterBundle\Tests\Form\EventListener" line="98">
+        <name>getForm</name>
+        <type>function</type>
+        <argument line="98">
+          <name>$name</name>
+          <default><![CDATA['name']]></default>
+          <type/>
+        </argument>
+        <argument line="98">
+          <name>$propertyPath</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="DMS\Bundle\FilterBundle\Tests\Form\EventListener" line="103">
+        <name>getMockForm</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\FilterBundle\Tests\Form\EventListener" line="108">
+        <name>testFilterIgnoresNonRoot</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\FilterBundle\Tests\Form\EventListener" line="121">
+        <name>testFilterIgnoresNoObject</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\FilterBundle\Tests\Form\EventListener" line="139">
+        <name>testFilterOnPostBind</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\FilterBundle\Tests\Form\EventListener" line="158">
+        <name>testAssertEventsBinding</name>
         <type>function</type>
       </method>
     </class>
   </file>
-  <file path="DMS/Bundles/LauncherBundle/Controller/DefaultController.php" hash="8bc4b0b45ee7ecba547f11ec43f91cc6">
+  <file path="DMS/Bundle/FilterBundle/Tests/Form/Type/FormTypeFilterExtensionTest.php" hash="2dfa244fb77db54171d7e12ca70be214">
+    <parse_markers>
+      <critical line="13" code="50019">No short description for property $filter</critical>
+      <critical line="18" code="50019">No short description for property $autoFilter</critical>
+      <error line="23" code="50010">No DocBlock was found for method setUp()</error>
+      <error line="30" code="50010">No DocBlock was found for method tearDown()</error>
+      <error line="38" code="50010">No DocBlock was found for method getExtensions()</error>
+      <error line="45" code="50010">No DocBlock was found for method testFilterSubscriberDefined()</error>
+      <error line="64" code="50010">No DocBlock was found for method testFilterSubscriberDisabled()</error>
+      <error line="77" code="50010">No DocBlock was found for method testBindValidatesData()</error>
+      <error line="11" code="50000">No DocBlock was found for FormTypeFilterExtensionTest</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundle/FilterBundle/Tests/Form/Type/FormTypeFilterExtensionTest.php</error>
+    </parse_markers>
+    <namespace-alias name="FormInterface">Symfony\Component\Form\FormInterface</namespace-alias>
+    <namespace-alias name="FormEvents">Symfony\Component\Form\FormEvents</namespace-alias>
+    <namespace-alias name="AnnotatedClass">DMS\Bundle\FilterBundle\Tests\Dummy\AnnotatedClass</namespace-alias>
+    <namespace-alias name="FilterExtension">DMS\Bundle\FilterBundle\Form\FilterExtension</namespace-alias>
+    <namespace-alias name="TypeTestCase">Symfony\Component\Form\Tests\Extension\Core\Type\TypeTestCase</namespace-alias>
+    <class final="false" abstract="false" namespace="Symfony\Component\Form\Tests\Extension\Validator\Type" line="11">
+      <name>FormTypeFilterExtensionTest</name>
+      <full_name>\Symfony\Component\Form\Tests\Extension\Validator\Type\FormTypeFilterExtensionTest</full_name>
+      <extends>\Symfony\Component\Form\Tests\Extension\Core\Type\TypeTestCase</extends>
+      <property final="false" static="false" visibility="protected" line="16" package="Default">
+        <name>$filter</name>
+        <default><![CDATA[]]></default>
+        <docblock line="13">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="13" name="var" description="" type="\DMS\Bundle\FilterBundle\Service\Filter">
+            <type by_reference="false">\DMS\Bundle\FilterBundle\Service\Filter</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="21" package="Default">
+        <name>$autoFilter</name>
+        <default><![CDATA[true]]></default>
+        <docblock line="18">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="18" name="var" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Symfony\Component\Form\Tests\Extension\Validator\Type" line="23">
+        <name>setUp</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Symfony\Component\Form\Tests\Extension\Validator\Type" line="30">
+        <name>tearDown</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Symfony\Component\Form\Tests\Extension\Validator\Type" line="38">
+        <name>getExtensions</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Symfony\Component\Form\Tests\Extension\Validator\Type" line="45">
+        <name>testFilterSubscriberDefined</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Symfony\Component\Form\Tests\Extension\Validator\Type" line="64">
+        <name>testFilterSubscriberDisabled</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Symfony\Component\Form\Tests\Extension\Validator\Type" line="77">
+        <name>testBindValidatesData</name>
+        <type>function</type>
+      </method>
+    </class>
+  </file>
+  <file path="DMS/Bundle/LauncherBundle/Controller/DefaultController.php" hash="e7998c78cfdc3b7f00421455fc22b49b">
     <parse_markers>
       <error line="14" code="50012">No short description for method indexAction()</error>
       <error line="14" code="50015">Argument $referrerToken is missing from the Docblock of indexAction()</error>
       <error line="71" code="50012">No short description for method doneAction()</error>
       <error line="71" code="50015">Argument $token is missing from the Docblock of doneAction()</error>
       <error line="12" code="50000">No DocBlock was found for DefaultController</error>
-      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundles/LauncherBundle/Controller/DefaultController.php</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundle/LauncherBundle/Controller/DefaultController.php</error>
     </parse_markers>
     <namespace-alias name="Controller">Symfony\Bundle\FrameworkBundle\Controller\Controller</namespace-alias>
     <namespace-alias name="Route">Sensio\Bundle\FrameworkExtraBundle\Configuration\Route</namespace-alias>
     <namespace-alias name="Method">Sensio\Bundle\FrameworkExtraBundle\Configuration\Method</namespace-alias>
     <namespace-alias name="Template">Sensio\Bundle\FrameworkExtraBundle\Configuration\Template</namespace-alias>
-    <namespace-alias name="PreUser">DMS\Bundles\LauncherBundle\Entity\PreUser</namespace-alias>
-    <namespace-alias name="RegistrationForm">DMS\Bundles\LauncherBundle\Form\RegistrationForm</namespace-alias>
-    <class final="false" abstract="false" namespace="DMS\Bundles\LauncherBundle\Controller" line="12">
+    <namespace-alias name="PreUser">DMS\Bundle\LauncherBundle\Entity\PreUser</namespace-alias>
+    <namespace-alias name="RegistrationForm">DMS\Bundle\LauncherBundle\Form\RegistrationForm</namespace-alias>
+    <class final="false" abstract="false" namespace="DMS\Bundle\LauncherBundle\Controller" line="12">
       <name>DefaultController</name>
-      <full_name>\DMS\Bundles\LauncherBundle\Controller\DefaultController</full_name>
+      <full_name>\DMS\Bundle\LauncherBundle\Controller\DefaultController</full_name>
       <extends>\Symfony\Bundle\FrameworkBundle\Controller\Controller</extends>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Controller" line="18" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Controller" line="18" package="Default">
         <name>indexAction</name>
         <type>function</type>
         <docblock line="14">
@@ -204,7 +769,7 @@ Applications in a very easy way.</p>]]></long-description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Controller" line="42" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Controller" line="42" package="Default">
         <name>registerAction</name>
         <type>function</type>
         <docblock line="35">
@@ -215,7 +780,7 @@ Applications in a very easy way.</p>]]></long-description>
           <tag line="35" name="Template" description="(&quot;DMSLauncherBundle:Default:index.html.twig&quot;)"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Controller" line="75" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Controller" line="75" package="Default">
         <name>doneAction</name>
         <type>function</type>
         <docblock line="71">
@@ -232,26 +797,26 @@ Applications in a very easy way.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="DMS/Bundles/LauncherBundle/Controller/PreUserController.php" hash="d7adb7ed056791be4c9b59e79c3d32fb">
+  <file path="DMS/Bundle/LauncherBundle/Controller/PreUserController.php" hash="88318de82926ec731e4f479b55c35bfe">
     <parse_markers>
       <error line="33" code="50015">Argument $id is missing from the Docblock of showAction()</error>
-      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundles/LauncherBundle/Controller/PreUserController.php</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundle/LauncherBundle/Controller/PreUserController.php</error>
     </parse_markers>
     <namespace-alias name="Controller">Symfony\Bundle\FrameworkBundle\Controller\Controller</namespace-alias>
     <namespace-alias name="Method">Sensio\Bundle\FrameworkExtraBundle\Configuration\Method</namespace-alias>
     <namespace-alias name="Route">Sensio\Bundle\FrameworkExtraBundle\Configuration\Route</namespace-alias>
     <namespace-alias name="Template">Sensio\Bundle\FrameworkExtraBundle\Configuration\Template</namespace-alias>
-    <namespace-alias name="PreUser">DMS\Bundles\LauncherBundle\Entity\PreUser</namespace-alias>
-    <class final="false" abstract="false" namespace="DMS\Bundles\LauncherBundle\Controller" line="16" package="Default">
+    <namespace-alias name="PreUser">DMS\Bundle\LauncherBundle\Entity\PreUser</namespace-alias>
+    <class final="false" abstract="false" namespace="DMS\Bundle\LauncherBundle\Controller" line="16" package="Default">
       <name>PreUserController</name>
-      <full_name>\DMS\Bundles\LauncherBundle\Controller\PreUserController</full_name>
+      <full_name>\DMS\Bundle\LauncherBundle\Controller\PreUserController</full_name>
       <extends>\Symfony\Bundle\FrameworkBundle\Controller\Controller</extends>
       <docblock line="11">
         <description><![CDATA[PreUser controller.]]></description>
         <long-description><![CDATA[]]></long-description>
         <tag line="11" name="Route" description="(&quot;/admin/preuser&quot;)"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Controller" line="24" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Controller" line="24" package="Default">
         <name>indexAction</name>
         <type>function</type>
         <docblock line="18">
@@ -261,7 +826,7 @@ Applications in a very easy way.</p>]]></long-description>
           <tag line="18" name="Template" description="()"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Controller" line="39" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Controller" line="39" package="Default">
         <name>showAction</name>
         <type>function</type>
         <docblock line="33">
@@ -278,22 +843,22 @@ Applications in a very easy way.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="DMS/Bundles/LauncherBundle/DependencyInjection/Configuration.php" hash="aa8eae4c42449827c2b7fb2a91894ac5">
+  <file path="DMS/Bundle/LauncherBundle/DependencyInjection/Configuration.php" hash="38bdd60ca324e435af55fe1059e6610a">
     <parse_markers>
-      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundles/LauncherBundle/DependencyInjection/Configuration.php</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundle/LauncherBundle/DependencyInjection/Configuration.php</error>
     </parse_markers>
     <namespace-alias name="TreeBuilder">Symfony\Component\Config\Definition\Builder\TreeBuilder</namespace-alias>
     <namespace-alias name="ConfigurationInterface">Symfony\Component\Config\Definition\ConfigurationInterface</namespace-alias>
-    <class final="false" abstract="false" namespace="DMS\Bundles\LauncherBundle\DependencyInjection" line="13" package="Default">
+    <class final="false" abstract="false" namespace="DMS\Bundle\LauncherBundle\DependencyInjection" line="13" package="Default">
       <name>Configuration</name>
-      <full_name>\DMS\Bundles\LauncherBundle\DependencyInjection\Configuration</full_name>
+      <full_name>\DMS\Bundle\LauncherBundle\DependencyInjection\Configuration</full_name>
       <extends/>
       <extends>\Symfony\Component\Config\Definition\ConfigurationInterface</extends>
       <docblock line="8">
         <description><![CDATA[This is the class that validates and merges configuration from your app/config files]]></description>
         <long-description><![CDATA[<p>To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html#cookbook-bundles-extension-config-class}</p>]]></long-description>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\DependencyInjection" line="18" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\DependencyInjection" line="18" package="Default">
         <name>getConfigTreeBuilder</name>
         <type>function</type>
         <docblock line="15">
@@ -303,26 +868,26 @@ Applications in a very easy way.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="DMS/Bundles/LauncherBundle/DependencyInjection/DMSLauncherExtension.php" hash="7ab08c7f57e3d8ca0b61ee8348231520">
+  <file path="DMS/Bundle/LauncherBundle/DependencyInjection/DMSLauncherExtension.php" hash="ec93ad036b2d8260dabb28a33627ea82">
     <parse_markers>
       <error line="17" code="50015">Argument $configs is missing from the Docblock of load()</error>
       <error line="17" code="50015">Argument $container is missing from the Docblock of load()</error>
       <error line="46" code="50010">No DocBlock was found for method getAlias()</error>
-      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundles/LauncherBundle/DependencyInjection/DMSLauncherExtension.php</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundle/LauncherBundle/DependencyInjection/DMSLauncherExtension.php</error>
     </parse_markers>
     <namespace-alias name="ContainerBuilder">Symfony\Component\DependencyInjection\ContainerBuilder</namespace-alias>
     <namespace-alias name="FileLocator">Symfony\Component\Config\FileLocator</namespace-alias>
     <namespace-alias name="Extension">Symfony\Component\HttpKernel\DependencyInjection\Extension</namespace-alias>
     <namespace-alias name="Loader">Symfony\Component\DependencyInjection\Loader</namespace-alias>
-    <class final="false" abstract="false" namespace="DMS\Bundles\LauncherBundle\DependencyInjection" line="15" package="Default">
+    <class final="false" abstract="false" namespace="DMS\Bundle\LauncherBundle\DependencyInjection" line="15" package="Default">
       <name>DMSLauncherExtension</name>
-      <full_name>\DMS\Bundles\LauncherBundle\DependencyInjection\DMSLauncherExtension</full_name>
+      <full_name>\DMS\Bundle\LauncherBundle\DependencyInjection\DMSLauncherExtension</full_name>
       <extends>\Symfony\Component\HttpKernel\DependencyInjection\Extension</extends>
       <docblock line="10">
         <description><![CDATA[This is the class that loads and manages your bundle configuration]]></description>
         <long-description><![CDATA[<p>To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}</p>]]></long-description>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\DependencyInjection" line="20" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\DependencyInjection" line="20" package="Default">
         <name>load</name>
         <type>function</type>
         <docblock line="17">
@@ -340,25 +905,25 @@ Applications in a very easy way.</p>]]></long-description>
           <type>ContainerBuilder</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\DependencyInjection" line="46">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\DependencyInjection" line="46">
         <name>getAlias</name>
         <type>function</type>
       </method>
     </class>
   </file>
-  <file path="DMS/Bundles/LauncherBundle/DMSLauncherBundle.php" hash="e0eac2cf1858ba9753ddbce34b5a31c6">
+  <file path="DMS/Bundle/LauncherBundle/DMSLauncherBundle.php" hash="a101cd3aebd7238b6b54939adeb38176">
     <parse_markers>
       <error line="7" code="50000">No DocBlock was found for DMSLauncherBundle</error>
-      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundles/LauncherBundle/DMSLauncherBundle.php</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundle/LauncherBundle/DMSLauncherBundle.php</error>
     </parse_markers>
     <namespace-alias name="Bundle">Symfony\Component\HttpKernel\Bundle\Bundle</namespace-alias>
-    <class final="false" abstract="false" namespace="DMS\Bundles\LauncherBundle" line="7">
+    <class final="false" abstract="false" namespace="DMS\Bundle\LauncherBundle" line="7">
       <name>DMSLauncherBundle</name>
-      <full_name>\DMS\Bundles\LauncherBundle\DMSLauncherBundle</full_name>
+      <full_name>\DMS\Bundle\LauncherBundle\DMSLauncherBundle</full_name>
       <extends>\Symfony\Component\HttpKernel\Bundle\Bundle</extends>
     </class>
   </file>
-  <file path="DMS/Bundles/LauncherBundle/Entity/PreUser.php" hash="643a36eb919341c6c121d65d9d904177">
+  <file path="DMS/Bundle/LauncherBundle/Entity/PreUser.php" hash="94ac8f4457b08dad230bf9cc364a1341">
     <parse_markers>
       <critical line="19" code="50019">No short description for property $id</critical>
       <critical line="28" code="50019">No short description for property $email</critical>
@@ -367,20 +932,20 @@ Applications in a very easy way.</p>]]></long-description>
       <critical line="49" code="50019">No short description for property $token</critical>
       <critical line="56" code="50019">No short description for property $referrerUrl</critical>
       <critical line="63" code="50019">No short description for property $referrerToken</critical>
-      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundles/LauncherBundle/Entity/PreUser.php</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundle/LauncherBundle/Entity/PreUser.php</error>
     </parse_markers>
     <namespace-alias name="ORM">Doctrine\ORM\Mapping</namespace-alias>
     <namespace-alias name="UniqueEntity">Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity</namespace-alias>
-    <class final="false" abstract="false" namespace="DMS\Bundles\LauncherBundle\Entity" line="17" package="Default">
+    <class final="false" abstract="false" namespace="DMS\Bundle\LauncherBundle\Entity" line="17" package="Default">
       <name>PreUser</name>
-      <full_name>\DMS\Bundles\LauncherBundle\Entity\PreUser</full_name>
+      <full_name>\DMS\Bundle\LauncherBundle\Entity\PreUser</full_name>
       <extends/>
       <docblock line="8">
-        <description><![CDATA[DMS\Bundles\LauncherBundle\Entity\PreUser]]></description>
+        <description><![CDATA[DMS\Bundle\LauncherBundle\Entity\PreUser]]></description>
         <long-description><![CDATA[]]></long-description>
         <tag line="8" name="ORM\Table" description="Table" plugin="doctrine" link="http://www.doctrine-project.org/docs/orm/2.1/en/reference/annotations-reference.html#annref-table" content=""/>
-        <tag line="8" name="ORM\Entity" description="Entity" plugin="doctrine" link="http://www.doctrine-project.org/docs/orm/2.1/en/reference/annotations-reference.html#annref-entity" content="repositoryClass=&quot;DMS\Bundles\LauncherBundle\Entity\PreUserRepository&quot;">
-          <argument field-name="repositoryClass">"DMS\Bundles\LauncherBundle\Entity\PreUserRepository"</argument>
+        <tag line="8" name="ORM\Entity" description="Entity" plugin="doctrine" link="http://www.doctrine-project.org/docs/orm/2.1/en/reference/annotations-reference.html#annref-entity" content="repositoryClass=&quot;DMS\Bundle\LauncherBundle\Entity\PreUserRepository&quot;">
+          <argument field-name="repositoryClass">"DMS\Bundle\LauncherBundle\Entity\PreUserRepository"</argument>
         </tag>
         <tag line="8" name="UniqueEntity" description="(fields={&quot;username&quot;}, message=&quot;This username is taken&quot;)"/>
         <tag line="8" name="UniqueEntity" description="(fields={&quot;email&quot;}, message=&quot;This email is already registered&quot;)"/>
@@ -431,8 +996,8 @@ Applications in a very easy way.</p>]]></long-description>
         <docblock line="42">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="42" name="var" description="" type="\DMS\Bundles\LauncherBundle\Entity\datetime">
-            <type by_reference="false">\DMS\Bundles\LauncherBundle\Entity\datetime</type>
+          <tag line="42" name="var" description="" type="\DMS\Bundle\LauncherBundle\Entity\datetime">
+            <type by_reference="false">\DMS\Bundle\LauncherBundle\Entity\datetime</type>
           </tag>
           <tag line="42" name="ORM\Column" description="(type=&quot;datetime&quot;)"/>
         </docblock>
@@ -473,7 +1038,7 @@ Applications in a very easy way.</p>]]></long-description>
           <tag line="63" name="ORM\Column" description="(type=&quot;string&quot;, length=32, nullable=true)"/>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Entity" line="76" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Entity" line="76" package="Default">
         <name>getId</name>
         <type>function</type>
         <docblock line="71">
@@ -484,7 +1049,7 @@ Applications in a very easy way.</p>]]></long-description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Entity" line="86" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Entity" line="86" package="Default">
         <name>setEmail</name>
         <type>function</type>
         <docblock line="81">
@@ -500,7 +1065,7 @@ Applications in a very easy way.</p>]]></long-description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Entity" line="96" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Entity" line="96" package="Default">
         <name>getEmail</name>
         <type>function</type>
         <docblock line="91">
@@ -511,7 +1076,7 @@ Applications in a very easy way.</p>]]></long-description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Entity" line="106" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Entity" line="106" package="Default">
         <name>setUsername</name>
         <type>function</type>
         <docblock line="101">
@@ -527,7 +1092,7 @@ Applications in a very easy way.</p>]]></long-description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Entity" line="116" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Entity" line="116" package="Default">
         <name>getUsername</name>
         <type>function</type>
         <docblock line="111">
@@ -538,14 +1103,14 @@ Applications in a very easy way.</p>]]></long-description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Entity" line="126" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Entity" line="126" package="Default">
         <name>setRegisteredOn</name>
         <type>function</type>
         <docblock line="121">
           <description><![CDATA[Set registeredOn]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="121" name="param" description="" type="\DMS\Bundles\LauncherBundle\Entity\datetime" variable="$registeredOn">
-            <type by_reference="false">\DMS\Bundles\LauncherBundle\Entity\datetime</type>
+          <tag line="121" name="param" description="" type="\DMS\Bundle\LauncherBundle\Entity\datetime" variable="$registeredOn">
+            <type by_reference="false">\DMS\Bundle\LauncherBundle\Entity\datetime</type>
           </tag>
         </docblock>
         <argument line="126">
@@ -554,18 +1119,18 @@ Applications in a very easy way.</p>]]></long-description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Entity" line="136" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Entity" line="136" package="Default">
         <name>getRegisteredOn</name>
         <type>function</type>
         <docblock line="131">
           <description><![CDATA[Get registeredOn]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="131" name="return" description="" type="\DMS\Bundles\LauncherBundle\Entity\datetime">
-            <type by_reference="false">\DMS\Bundles\LauncherBundle\Entity\datetime</type>
+          <tag line="131" name="return" description="" type="\DMS\Bundle\LauncherBundle\Entity\datetime">
+            <type by_reference="false">\DMS\Bundle\LauncherBundle\Entity\datetime</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Entity" line="146" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Entity" line="146" package="Default">
         <name>setToken</name>
         <type>function</type>
         <docblock line="141">
@@ -581,7 +1146,7 @@ Applications in a very easy way.</p>]]></long-description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Entity" line="156" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Entity" line="156" package="Default">
         <name>getToken</name>
         <type>function</type>
         <docblock line="151">
@@ -592,7 +1157,7 @@ Applications in a very easy way.</p>]]></long-description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Entity" line="166" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Entity" line="166" package="Default">
         <name>setReferrerUrl</name>
         <type>function</type>
         <docblock line="161">
@@ -608,7 +1173,7 @@ Applications in a very easy way.</p>]]></long-description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Entity" line="176" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Entity" line="176" package="Default">
         <name>getReferrerUrl</name>
         <type>function</type>
         <docblock line="171">
@@ -619,7 +1184,7 @@ Applications in a very easy way.</p>]]></long-description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Entity" line="186" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Entity" line="186" package="Default">
         <name>setReferrerToken</name>
         <type>function</type>
         <docblock line="181">
@@ -635,7 +1200,7 @@ Applications in a very easy way.</p>]]></long-description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Entity" line="196" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Entity" line="196" package="Default">
         <name>getReferrerToken</name>
         <type>function</type>
         <docblock line="191">
@@ -648,22 +1213,22 @@ Applications in a very easy way.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="DMS/Bundles/LauncherBundle/Entity/PreUserRepository.php" hash="4ca51a7937102be7dc4236bbd37971c9">
+  <file path="DMS/Bundle/LauncherBundle/Entity/PreUserRepository.php" hash="818f25ceb0afce772c4b632af6a5ded0">
     <parse_markers>
       <error line="15" code="50010">No DocBlock was found for method getReferralsCount()</error>
-      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundles/LauncherBundle/Entity/PreUserRepository.php</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundle/LauncherBundle/Entity/PreUserRepository.php</error>
     </parse_markers>
     <namespace-alias name="EntityRepository">Doctrine\ORM\EntityRepository</namespace-alias>
-    <class final="false" abstract="false" namespace="DMS\Bundles\LauncherBundle\Entity" line="13" package="Default">
+    <class final="false" abstract="false" namespace="DMS\Bundle\LauncherBundle\Entity" line="13" package="Default">
       <name>PreUserRepository</name>
-      <full_name>\DMS\Bundles\LauncherBundle\Entity\PreUserRepository</full_name>
+      <full_name>\DMS\Bundle\LauncherBundle\Entity\PreUserRepository</full_name>
       <extends>\Doctrine\ORM\EntityRepository</extends>
       <docblock line="7">
         <description><![CDATA[PreUserRepository]]></description>
         <long-description><![CDATA[<p>This class was generated by the Doctrine ORM. Add your own custom
 repository methods below.</p>]]></long-description>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Entity" line="15">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Entity" line="15">
         <name>getReferralsCount</name>
         <type>function</type>
         <argument line="15">
@@ -674,20 +1239,20 @@ repository methods below.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="DMS/Bundles/LauncherBundle/Form/RegistrationForm.php" hash="7372e48481ea71be2cdd8cb0c90f47df">
+  <file path="DMS/Bundle/LauncherBundle/Form/RegistrationForm.php" hash="23bc4db21a9dcca66da2dcc44a245258">
     <parse_markers>
       <error line="10" code="50010">No DocBlock was found for method buildForm()</error>
       <error line="24" code="50010">No DocBlock was found for method getName()</error>
       <error line="8" code="50000">No DocBlock was found for RegistrationForm</error>
-      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundles/LauncherBundle/Form/RegistrationForm.php</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundle/LauncherBundle/Form/RegistrationForm.php</error>
     </parse_markers>
     <namespace-alias name="AbstractType">Symfony\Component\Form\AbstractType</namespace-alias>
     <namespace-alias name="FormBuilder">Symfony\Component\Form\FormBuilder</namespace-alias>
-    <class final="false" abstract="false" namespace="DMS\Bundles\LauncherBundle\Form" line="8">
+    <class final="false" abstract="false" namespace="DMS\Bundle\LauncherBundle\Form" line="8">
       <name>RegistrationForm</name>
-      <full_name>\DMS\Bundles\LauncherBundle\Form\RegistrationForm</full_name>
+      <full_name>\DMS\Bundle\LauncherBundle\Form\RegistrationForm</full_name>
       <extends>\Symfony\Component\Form\AbstractType</extends>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Form" line="10">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Form" line="10">
         <name>buildForm</name>
         <type>function</type>
         <argument line="10">
@@ -701,24 +1266,24 @@ repository methods below.</p>]]></long-description>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Form" line="24">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Form" line="24">
         <name>getName</name>
         <type>function</type>
       </method>
     </class>
   </file>
-  <file path="DMS/Bundles/LauncherBundle/Service/ExportService.php" hash="f9c8ae006b773045a6a6f5e39e9dcc6d">
+  <file path="DMS/Bundle/LauncherBundle/Service/ExportService.php" hash="2c1ed39eed00f17c622c6d86cacd3c93">
     <parse_markers>
       <critical line="14" code="50019">No short description for property $em</critical>
       <critical line="19" code="50019">No short description for property $repository</critical>
       <error line="23" code="50012">No short description for method __construct()</error>
       <error line="23" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $entityManager in __construct()</error>
-      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundles/LauncherBundle/Service/ExportService.php</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundle/LauncherBundle/Service/ExportService.php</error>
     </parse_markers>
     <namespace-alias name="EntityManager">Doctrine\ORM\EntityManager</namespace-alias>
-    <class final="false" abstract="false" namespace="DMS\Bundles\LauncherBundle\Service" line="11" package="Default">
+    <class final="false" abstract="false" namespace="DMS\Bundle\LauncherBundle\Service" line="11" package="Default">
       <name>ExportService</name>
-      <full_name>\DMS\Bundles\LauncherBundle\Service\ExportService</full_name>
+      <full_name>\DMS\Bundle\LauncherBundle\Service\ExportService</full_name>
       <extends/>
       <docblock line="6">
         <description><![CDATA[Export Service]]></description>
@@ -741,12 +1306,12 @@ repository methods below.</p>]]></long-description>
         <docblock line="19">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="19" name="var" description="" type="\DMS\Bundles\LauncherBundle\Entity\PreUserRepository">
-            <type by_reference="false">\DMS\Bundles\LauncherBundle\Entity\PreUserRepository</type>
+          <tag line="19" name="var" description="" type="\DMS\Bundle\LauncherBundle\Entity\PreUserRepository">
+            <type by_reference="false">\DMS\Bundle\LauncherBundle\Entity\PreUserRepository</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Service" line="26" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Service" line="26" package="Default">
         <name>__construct</name>
         <type>function</type>
         <docblock line="23">
@@ -762,7 +1327,7 @@ repository methods below.</p>]]></long-description>
           <type>EntityManager</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Service" line="37" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Service" line="37" package="Default">
         <name>exportAllUsers</name>
         <type>function</type>
         <docblock line="32">
@@ -775,19 +1340,19 @@ repository methods below.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="DMS/Bundles/LauncherBundle/Twig/LauncherExtension.php" hash="531e0100cc908452e184c0b8c70fbd95">
+  <file path="DMS/Bundle/LauncherBundle/Twig/LauncherExtension.php" hash="05f5d5a037701d948ed46b910e2c11c2">
     <parse_markers>
       <error line="9" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $environment in initRuntime()</error>
       <error line="6" code="50000">No DocBlock was found for LauncherExtension</error>
-      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundles/LauncherBundle/Twig/LauncherExtension.php</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Bundle/LauncherBundle/Twig/LauncherExtension.php</error>
     </parse_markers>
     <namespace-alias name="ContainerAware">Symfony\Component\DependencyInjection\ContainerAware</namespace-alias>
-    <class final="false" abstract="false" namespace="DMS\Bundles\LauncherBundle\Twig" line="6">
+    <class final="false" abstract="false" namespace="DMS\Bundle\LauncherBundle\Twig" line="6">
       <name>LauncherExtension</name>
-      <full_name>\DMS\Bundles\LauncherBundle\Twig\LauncherExtension</full_name>
+      <full_name>\DMS\Bundle\LauncherBundle\Twig\LauncherExtension</full_name>
       <extends>\Symfony\Component\DependencyInjection\ContainerAware</extends>
       <extends>\Twig_ExtensionInterface</extends>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Twig" line="16" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Twig" line="16" package="Default">
         <name>initRuntime</name>
         <type>function</type>
         <docblock line="9">
@@ -803,7 +1368,7 @@ repository methods below.</p>]]></long-description>
           <type>Twig_Environment</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Twig" line="23" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Twig" line="23" package="Default">
         <name>getTokenParsers</name>
         <type>function</type>
         <docblock line="18">
@@ -814,7 +1379,7 @@ repository methods below.</p>]]></long-description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Twig" line="33" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Twig" line="33" package="Default">
         <name>getNodeVisitors</name>
         <type>function</type>
         <docblock line="28">
@@ -825,7 +1390,7 @@ repository methods below.</p>]]></long-description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Twig" line="43" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Twig" line="43" package="Default">
         <name>getFilters</name>
         <type>function</type>
         <docblock line="38">
@@ -836,7 +1401,7 @@ repository methods below.</p>]]></long-description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Twig" line="53" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Twig" line="53" package="Default">
         <name>getTests</name>
         <type>function</type>
         <docblock line="48">
@@ -847,7 +1412,7 @@ repository methods below.</p>]]></long-description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Twig" line="63" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Twig" line="63" package="Default">
         <name>getFunctions</name>
         <type>function</type>
         <docblock line="58">
@@ -858,7 +1423,7 @@ repository methods below.</p>]]></long-description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Twig" line="73" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Twig" line="73" package="Default">
         <name>getOperators</name>
         <type>function</type>
         <docblock line="68">
@@ -869,7 +1434,7 @@ repository methods below.</p>]]></long-description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Twig" line="83" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Twig" line="83" package="Default">
         <name>getGlobals</name>
         <type>function</type>
         <docblock line="78">
@@ -880,7 +1445,7 @@ repository methods below.</p>]]></long-description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundles\LauncherBundle\Twig" line="95" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Bundle\LauncherBundle\Twig" line="95" package="Default">
         <name>getName</name>
         <type>function</type>
         <docblock line="90">
@@ -2079,60 +2644,100 @@ that were defined for them]]></description>
       </method>
     </class>
   </file>
-  <file path="DMS/Filter/Rules/Alnum.php" hash="0308731a4328068b95c828aa54bad3db">
+  <file path="DMS/Filter/Rules/Alnum.php" hash="98352325be8f5fd989f2231a9cfff45c">
     <parse_markers>
-      <error line="15" code="50018">No DocBlock was found for property $unicodeEnabled</error>
-      <error line="17" code="50018">No DocBlock was found for property $allowWhitespace</error>
-      <error line="19" code="50015">Argument $value is missing from the Docblock of applyFilter()</error>
+      <error line="23" code="50015">Argument $value is missing from the Docblock of applyFilter()</error>
       <error line="1" code="50007">No page-level DocBlock was found in file DMS/Filter/Rules/Alnum.php</error>
     </parse_markers>
     <class final="false" abstract="false" namespace="DMS\Filter\Rules" line="13" package="DMS\Filter">
       <name>Alnum</name>
       <full_name>\DMS\Filter\Rules\Alnum</full_name>
-      <extends>\DMS\Filter\Rules\Rule</extends>
+      <extends>\DMS\Filter\Rules\RegExp</extends>
       <docblock line="5">
-        <description><![CDATA[Alnum Rule (Alpanumeric)]]></description>
+        <description><![CDATA[Alnum Rule (Alphanumeric)]]></description>
         <long-description><![CDATA[]]></long-description>
         <tag line="5" name="package" description="DMS"/>
         <tag line="5" name="subpackage" description="Filter"/>
         <tag line="5" name="Annotation" description=""/>
       </docblock>
-      <property final="false" static="true" visibility="protected" line="15">
-        <name>$unicodeEnabled</name>
-        <default><![CDATA[]]></default>
-      </property>
-      <property final="false" static="false" visibility="public" line="17">
+      <property final="false" static="false" visibility="public" line="21" package="Default">
         <name>$allowWhitespace</name>
         <default><![CDATA[true]]></default>
+        <docblock line="16">
+          <description><![CDATA[Allow Whitespace or not]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="16" name="var" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Filter\Rules" line="22" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Filter\Rules" line="26" package="Default">
         <name>applyFilter</name>
         <type>function</type>
-        <docblock line="19">
+        <docblock line="23">
           <description><![CDATA[{@inheritDoc}]]></description>
           <long-description><![CDATA[]]></long-description>
         </docblock>
-        <argument line="22">
+        <argument line="26">
           <name>$value</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Filter\Rules" line="39" package="Default">
-        <name>checkUnicodeSupport</name>
-        <type>function</type>
-        <docblock line="35">
-          <description><![CDATA[Verifies that Regular Expression functions support unicode]]></description>
-          <long-description><![CDATA[]]></long-description>
-          <tag line="35" name="return" description="" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Filter\Rules" line="51" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Filter\Rules" line="40" package="Default">
         <name>getDefaultOption</name>
         <type>function</type>
-        <docblock line="48">
+        <docblock line="37">
+          <description><![CDATA[{@inheritDoc}]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="DMS/Filter/Rules/Alpha.php" hash="e4000dd78affb3f2f450ef538a1e6c8a">
+    <parse_markers>
+      <error line="23" code="50015">Argument $value is missing from the Docblock of applyFilter()</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Filter/Rules/Alpha.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="DMS\Filter\Rules" line="13" package="DMS\Filter">
+      <name>Alpha</name>
+      <full_name>\DMS\Filter\Rules\Alpha</full_name>
+      <extends>\DMS\Filter\Rules\RegExp</extends>
+      <docblock line="5">
+        <description><![CDATA[Alpha Rule]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="5" name="package" description="DMS"/>
+        <tag line="5" name="subpackage" description="Filter"/>
+        <tag line="5" name="Annotation" description=""/>
+      </docblock>
+      <property final="false" static="false" visibility="public" line="21" package="Default">
+        <name>$allowWhitespace</name>
+        <default><![CDATA[true]]></default>
+        <docblock line="16">
+          <description><![CDATA[Allow Whitespace or not]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="16" name="var" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Filter\Rules" line="26" package="Default">
+        <name>applyFilter</name>
+        <type>function</type>
+        <docblock line="23">
+          <description><![CDATA[{@inheritDoc}]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+        <argument line="26">
+          <name>$value</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Filter\Rules" line="40" package="Default">
+        <name>getDefaultOption</name>
+        <type>function</type>
+        <docblock line="37">
           <description><![CDATA[{@inheritDoc}]]></description>
           <long-description><![CDATA[]]></long-description>
         </docblock>
@@ -2170,6 +2775,56 @@ that were defined for them]]></description>
       </method>
     </class>
   </file>
+  <file path="DMS/Filter/Rules/Digits.php" hash="b735ce9605e98bbb181ca2b51e48c197">
+    <parse_markers>
+      <error line="23" code="50015">Argument $value is missing from the Docblock of applyFilter()</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Filter/Rules/Digits.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="DMS\Filter\Rules" line="13" package="DMS\Filter">
+      <name>Digits</name>
+      <full_name>\DMS\Filter\Rules\Digits</full_name>
+      <extends>\DMS\Filter\Rules\RegExp</extends>
+      <docblock line="5">
+        <description><![CDATA[Digits Rule]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="5" name="package" description="DMS"/>
+        <tag line="5" name="subpackage" description="Filter"/>
+        <tag line="5" name="Annotation" description=""/>
+      </docblock>
+      <property final="false" static="false" visibility="public" line="21" package="Default">
+        <name>$allowWhitespace</name>
+        <default><![CDATA[true]]></default>
+        <docblock line="16">
+          <description><![CDATA[Allow Whitespace or not]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="16" name="var" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Filter\Rules" line="26" package="Default">
+        <name>applyFilter</name>
+        <type>function</type>
+        <docblock line="23">
+          <description><![CDATA[{@inheritDoc}]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+        <argument line="26">
+          <name>$value</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Filter\Rules" line="40" package="Default">
+        <name>getDefaultOption</name>
+        <type>function</type>
+        <docblock line="37">
+          <description><![CDATA[{@inheritDoc}]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+    </class>
+  </file>
   <file path="DMS/Filter/Rules/Float.php" hash="e02ca0f747ebaae17b6bd1371b65a510">
     <parse_markers>
       <error line="16" code="50015">Argument $value is missing from the Docblock of applyFilter()</error>
@@ -2195,6 +2850,70 @@ Converts content into a Float]]></description>
           <long-description><![CDATA[]]></long-description>
         </docblock>
         <argument line="19">
+          <name>$value</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="DMS/Filter/Rules/HtmlEntities.php" hash="307bcc74d5d51608316c7d79a0de1f98">
+    <parse_markers>
+      <error line="35" code="50015">Argument $value is missing from the Docblock of applyFilter()</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Filter/Rules/HtmlEntities.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="DMS\Filter\Rules" line="12" package="DMS\Filter">
+      <name>HtmlEntities</name>
+      <full_name>\DMS\Filter\Rules\HtmlEntities</full_name>
+      <extends>\DMS\Filter\Rules\Rule</extends>
+      <docblock line="4">
+        <description><![CDATA[Html Entities Filter]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="4" name="package" description="DMS"/>
+        <tag line="4" name="subpackage" description="Filter"/>
+        <tag line="4" name="Annotation" description=""/>
+      </docblock>
+      <property final="false" static="false" visibility="public" line="19" package="Default">
+        <name>$flags</name>
+        <default><![CDATA[ENT_COMPAT]]></default>
+        <docblock line="14">
+          <description><![CDATA[Flags]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="14" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="26" package="Default">
+        <name>$encoding</name>
+        <default><![CDATA['UTF-8']]></default>
+        <docblock line="21">
+          <description><![CDATA[Encoding to be used]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="21" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="33" package="Default">
+        <name>$doubleEncode</name>
+        <default><![CDATA[true]]></default>
+        <docblock line="28">
+          <description><![CDATA[Convert existing entities]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="28" name="var" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Filter\Rules" line="38" package="Default">
+        <name>applyFilter</name>
+        <type>function</type>
+        <docblock line="35">
+          <description><![CDATA[{@inheritDoc}]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+        <argument line="38">
           <name>$value</name>
           <default><![CDATA[]]></default>
           <type/>
@@ -2293,6 +3012,81 @@ replacement is defined.]]></description>
         <docblock line="38">
           <description><![CDATA[{@inheritDoc}]]></description>
           <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="DMS/Filter/Rules/RegExp.php" hash="0355767db6adc573adb9721e3d07e51a">
+    <parse_markers>
+      <error line="38" code="50015">Argument $value is missing from the Docblock of applyFilter()</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file DMS/Filter/Rules/RegExp.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="DMS\Filter\Rules" line="15" package="DMS\Filter">
+      <name>RegExp</name>
+      <full_name>\DMS\Filter\Rules\RegExp</full_name>
+      <extends>\DMS\Filter\Rules\Rule</extends>
+      <docblock line="5">
+        <description><![CDATA[RegExp Rule]]></description>
+        <long-description><![CDATA[<p>Filter using preg_replace and unicode or non-unicode patterns</p>]]></long-description>
+        <tag line="5" name="package" description="DMS"/>
+        <tag line="5" name="subpackage" description="Filter"/>
+        <tag line="5" name="Annotation" description=""/>
+      </docblock>
+      <property final="false" static="true" visibility="protected" line="22" package="Default">
+        <name>$unicodeEnabled</name>
+        <default><![CDATA[]]></default>
+        <docblock line="17">
+          <description><![CDATA[Defines if Unicode is supported]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="17" name="var" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="29" package="Default">
+        <name>$unicodePattern</name>
+        <default><![CDATA[]]></default>
+        <docblock line="24">
+          <description><![CDATA[Unicode version of Pattern]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="24" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="36" package="Default">
+        <name>$pattern</name>
+        <default><![CDATA[]]></default>
+        <docblock line="31">
+          <description><![CDATA[Reg Exp Pattern]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="31" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Filter\Rules" line="41" package="Default">
+        <name>applyFilter</name>
+        <type>function</type>
+        <docblock line="38">
+          <description><![CDATA[{@inheritDoc}]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+        <argument line="41">
+          <name>$value</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DMS\Filter\Rules" line="55" package="Default">
+        <name>checkUnicodeSupport</name>
+        <type>function</type>
+        <docblock line="51">
+          <description><![CDATA[Verifies that Regular Expression functions support unicode]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="51" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
         </docblock>
       </method>
     </class>
@@ -2751,17 +3545,24 @@ function to use it]]></description>
     </class>
   </file>
   <package name="DMS">
-    <package name="Bundles"/>
+    <package name="Bundle"/>
     <package name="Filter"/>
   </package>
   <package name="Default"/>
   <namespace name="DMS">
-    <namespace name="Bundles">
+    <namespace name="Bundle">
       <namespace name="FilterBundle">
         <namespace name="DependencyInjection"/>
+        <namespace name="Form">
+          <namespace name="EventListener"/>
+          <namespace name="Type"/>
+        </namespace>
         <namespace name="Service"/>
         <namespace name="Tests">
-          <namespace name="Service"/>
+          <namespace name="Dummy"/>
+          <namespace name="Form">
+            <namespace name="EventListener"/>
+          </namespace>
         </namespace>
       </namespace>
       <namespace name="LauncherBundle">
@@ -2779,6 +3580,19 @@ function to use it]]></description>
         <namespace name="Loader"/>
       </namespace>
       <namespace name="Rules"/>
+    </namespace>
+  </namespace>
+  <namespace name="Symfony">
+    <namespace name="Component">
+      <namespace name="Form">
+        <namespace name="Tests">
+          <namespace name="Extension">
+            <namespace name="Validator">
+              <namespace name="Type"/>
+            </namespace>
+          </namespace>
+        </namespace>
+      </namespace>
     </namespace>
   </namespace>
   <marker>todo</marker>
