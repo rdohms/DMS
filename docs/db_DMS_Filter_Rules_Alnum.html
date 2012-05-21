@@ -99,11 +99,16 @@
 <a xmlns:dbx="http://docblox-project.org/xsl/functions" name="top" class="anchor"></a><a name="classes" class="anchor"></a><a xmlns:dbx="http://docblox-project.org/xsl/functions" id="\DMS\Filter\Rules\Alnum" class="anchor"></a><h2 xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">\DMS\Filter\Rules\Alnum<div class="to-top"><a href="#top">jump to top</a></div>
 </h2>
 <div xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">
-<small class="package"><b>Package: </b>DMS\Filter</small><p class="short-description">Alnum Rule (Alpanumeric)</p>
-<div class="long-description"></div>
+<small class="package"><b>Package: </b>DMS\Filter</small><p class="short-description">Alnum Rule (Alphanumeric)</p>
+<div class="long-description"><p>Filter using preg_replace and unicode or non-unicode patterns</p></div>
 <dl class="class-info">
 <dt>Parent(s)</dt>
-<dd><a href="db_DMS_Filter_Rules_Rule.html#%5CDMS%5CFilter%5CRules%5CRule">\DMS\Filter\Rules\Rule</a></dd>
+<dd>
+<a href="db_DMS_Filter_Rules_RegExp.html#%5CDMS%5CFilter%5CRules%5CRegExp">\DMS\Filter\Rules\RegExp</a>
+            &lt;
+            <a href="db_DMS_Filter_Rules_Rule.html#%5CDMS%5CFilter%5CRules%5CRule" style="color: gray; font-size: 0.8em
+                ">\DMS\Filter\Rules\Rule</a>
+</dd>
 <dt>Annotation</dt>
 <dd>
          
@@ -112,25 +117,78 @@
 <h3>Properties</h3>
 <div>
 <a id="\DMS\Filter\Rules\Alnum::$allowWhitespace" class="anchor"></a><div class="property public">
-<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public">bool
                  <span class="highlight">$allowWhitespace</span>= 'true'
-                </code><div class="description"></div>
+                </code><div class="description">
+<p class="short-description">Allow Whitespace or not</p></div>
 <div class="code-tabs">
+<div class="long-description"></div>
 <strong>Default value</strong><code>true</code><strong>Details</strong><dl class="property-info">
 <dt>Type</dt>
-<dd>n/a</dd>
+<dd>bool</dd>
 </dl>
 </div>
 <div class="clear"></div>
 </div>
-<a id="\DMS\Filter\Rules\Alnum::$unicodeEnabled" class="anchor"></a><div class="property protected">
-<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">
-                 <span class="highlight">$unicodeEnabled</span>= ''
-                </code><div class="description"><span class="attribute">static</span></div>
+<a id="\DMS\Filter\Rules\Alnum::$pattern" class="anchor"></a><div class="property public inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public">string
+                 <span class="highlight">$pattern</span>= ''
+                </code><div class="description">
+<span class="attribute">inherited</span><p class="short-description">Reg Exp Pattern</p><small>Inherited from:
+                        <a href="db_DMS_Filter_Rules_RegExp.html#%5CDMS%5CFilter%5CRules%5CRegExp::%24%24pattern">\DMS\Filter\Rules\RegExp::$$pattern</a></small>
+</div>
 <div class="code-tabs">
+<div class="long-description"></div>
 <strong>Details</strong><dl class="property-info">
 <dt>Type</dt>
-<dd>n/a</dd>
+<dd>string</dd>
+<dt>Inherited_from</dt>
+<dd>
+<a href="db_DMS_Filter_Rules_RegExp.html#%5CDMS%5CFilter%5CRules%5CRegExp::%24%24pattern">\DMS\Filter\Rules\RegExp::$$pattern</a>
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\DMS\Filter\Rules\Alnum::$unicodeEnabled" class="anchor"></a><div class="property protected inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">boolean
+                 <span class="highlight">$unicodeEnabled</span>= ''
+                </code><div class="description">
+<span class="attribute">static</span><span class="attribute">inherited</span><p class="short-description">Defines if Unicode is supported</p><small>Inherited from:
+                        <a href="db_DMS_Filter_Rules_RegExp.html#%5CDMS%5CFilter%5CRules%5CRegExp::%24%24unicodeEnabled">\DMS\Filter\Rules\RegExp::$$unicodeEnabled</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>boolean</dd>
+<dt>Inherited_from</dt>
+<dd>
+<a href="db_DMS_Filter_Rules_RegExp.html#%5CDMS%5CFilter%5CRules%5CRegExp::%24%24unicodeEnabled">\DMS\Filter\Rules\RegExp::$$unicodeEnabled</a>
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\DMS\Filter\Rules\Alnum::$unicodePattern" class="anchor"></a><div class="property public inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public">string
+                 <span class="highlight">$unicodePattern</span>= ''
+                </code><div class="description">
+<span class="attribute">inherited</span><p class="short-description">Unicode version of Pattern</p><small>Inherited from:
+                        <a href="db_DMS_Filter_Rules_RegExp.html#%5CDMS%5CFilter%5CRules%5CRegExp::%24%24unicodePattern">\DMS\Filter\Rules\RegExp::$$unicodePattern</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+<dt>Inherited_from</dt>
+<dd>
+<a href="db_DMS_Filter_Rules_RegExp.html#%5CDMS%5CFilter%5CRules%5CRegExp::%24%24unicodePattern">\DMS\Filter\Rules\RegExp::$$unicodePattern</a>
+         
+    </dd>
 </dl>
 </div>
 <div class="clear"></div>
@@ -138,13 +196,63 @@
 </div>
 <h3>Methods</h3>
 <div>
-<a id="\DMS\Filter\Rules\Alnum::applyFilter()" class="anchor"></a><div class="method public">
-<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">applyFilter</span><span class="nb-faded-text">(
-           $value
+<a id="\DMS\Filter\Rules\Alnum::__construct()" class="anchor"></a><div class="method public inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__construct</span><span class="nb-faded-text">(
+          mixed $options
+              =
+              null
           )
         </span>
         :
-          void</code><div class="description"><p class="short_description">{@inheritDoc}</p></div>
+          void</code><div class="description">
+<span class="attribute">inherited</span><p class="short_description">Initializes the filter rule with its options</p>
+<small>Inherited from:
+                    <a href="db_DMS_Filter_Rules_Rule.html#%5CDMS%5CFilter%5CRules%5CRule::__construct()">\DMS\Filter\Rules\Rule::__construct()</a><a href="db_DMS_Filter_Rules_RegExp.html#%5CDMS%5CFilter%5CRules%5CRegExp::__construct()">\DMS\Filter\Rules\RegExp::__construct()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$options</th>
+<td>mixed</td>
+<td><em><p>The options (as associative array) or the value for the default option (any other type)</p>
+</em></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_DMS_Filter_Exception_InvalidOptionsException.html#%5CDMS%5CFilter%5CException%5CInvalidOptionsException">\DMS\Filter\Exception\InvalidOptionsException</a></td>
+<td><em>When you pass the names of non-existing options</em></td>
+</tr>
+<tr>
+<td><a href="db_DMS_Filter_Exception_MissingOptionsException.html#%5CDMS%5CFilter%5CException%5CMissingOptionsException">\DMS\Filter\Exception\MissingOptionsException</a></td>
+<td><em>When you don't pass any of the options returned by getRequiredOptions()</em></td>
+</tr>
+<tr>
+<td>\DMS\Filter\Rules\ConstraintDefinitionException</td>
+<td><em>When you don't pass an associative array, but getDefaultOption() returns NULL</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\DMS\Filter\Rules\Alnum::applyFilter()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">applyFilter</span><span class="nb-faded-text">(
+          mixed $value
+          )
+        </span>
+        :
+          mixed</code><div class="description"><p class="short_description">Applies actual filter rule to the value and returns the filtered
+value to be replaced in the original object</p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Parameters</strong><table class="argument-info">
@@ -155,20 +263,34 @@
 </tr></thead>
 <tr>
 <th>$value</th>
-<td></td>
+<td>mixed</td>
 <td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>mixed</td>
+<td></td>
 </tr>
 </table>
 </div>
 <div class="clear"></div>
 </div>
-<a id="\DMS\Filter\Rules\Alnum::checkUnicodeSupport()" class="anchor"></a><div class="method public">
+<a id="\DMS\Filter\Rules\Alnum::checkUnicodeSupport()" class="anchor"></a><div class="method public inherited_from ">
 <a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">checkUnicodeSupport</span><span class="nb-faded-text">(
           
           )
         </span>
         :
-          boolean</code><div class="description"><p class="short_description">Verifies that Regular Expression functions support unicode</p></div>
+          boolean</code><div class="description">
+<span class="attribute">inherited</span><p class="short_description">Verifies that Regular Expression functions support unicode</p>
+<small>Inherited from:
+                    <a href="db_DMS_Filter_Rules_RegExp.html#%5CDMS%5CFilter%5CRules%5CRegExp::checkUnicodeSupport()">\DMS\Filter\Rules\RegExp::checkUnicodeSupport()</a></small>
+</div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Returns</strong><table class="argument-info">
@@ -190,12 +312,161 @@
           )
         </span>
         :
-          void</code><div class="description"><p class="short_description">{@inheritDoc}</p></div>
-<div class="code-tabs"><div class="long-description"></div></div>
+          string</code><div class="description"><p class="short_description">Returns the name of the default option</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>Override this method to define a default option.</p></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\DMS\Filter\Rules\Alnum::getRequiredOptions()" class="anchor"></a><div class="method public inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getRequiredOptions</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          array</code><div class="description">
+<span class="attribute">inherited</span><p class="short_description">Returns the name of the required options</p>
+<small>Inherited from:
+                    <a href="db_DMS_Filter_Rules_Rule.html#%5CDMS%5CFilter%5CRules%5CRule::getRequiredOptions()">\DMS\Filter\Rules\Rule::getRequiredOptions()</a><a href="db_DMS_Filter_Rules_RegExp.html#%5CDMS%5CFilter%5CRules%5CRegExp::getRequiredOptions()">\DMS\Filter\Rules\RegExp::getRequiredOptions()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Override this method if you want to define required options.</p></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>array</td>
+<td></td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\DMS\Filter\Rules\__construct()
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\DMS\Filter\Rules\Alnum::parseOptions()" class="anchor"></a><div class="method private inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private"><span class="highlight">parseOptions</span><span class="nb-faded-text">(
+          mixed $options
+          )
+        </span>
+        :
+          <a href="http://php.net/manual/en/class.stdclass.php">\stdClass</a></code><div class="description">
+<span class="attribute">inherited</span><p class="short_description">Parses provided options into their properties and returns results
+for the parsing process</p>
+<small>Inherited from:
+                    <a href="db_DMS_Filter_Rules_Rule.html#%5CDMS%5CFilter%5CRules%5CRule::parseOptions()">\DMS\Filter\Rules\Rule::parseOptions()</a><a href="db_DMS_Filter_Rules_RegExp.html#%5CDMS%5CFilter%5CRules%5CRegExp::parseOptions()">\DMS\Filter\Rules\RegExp::parseOptions()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$options</th>
+<td>mixed</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="http://php.net/manual/en/class.stdclass.php">\stdClass</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\DMS\Filter\Rules\Alnum::parseOptionsArray()" class="anchor"></a><div class="method private inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private"><span class="highlight">parseOptionsArray</span><span class="nb-faded-text">(
+          array $options, <a href="http://php.net/manual/en/class.stdclass.php">\stdClass</a> $result
+          )
+        </span>
+        :
+          void</code><div class="description">
+<span class="attribute">inherited</span><p class="short_description">Parses Options in the array format</p>
+<small>Inherited from:
+                    <a href="db_DMS_Filter_Rules_Rule.html#%5CDMS%5CFilter%5CRules%5CRule::parseOptionsArray()">\DMS\Filter\Rules\Rule::parseOptionsArray()</a><a href="db_DMS_Filter_Rules_RegExp.html#%5CDMS%5CFilter%5CRules%5CRegExp::parseOptionsArray()">\DMS\Filter\Rules\RegExp::parseOptionsArray()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$options</th>
+<td>array</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$result</th>
+<td><a href="http://php.net/manual/en/class.stdclass.php">\stdClass</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\DMS\Filter\Rules\Alnum::parseSingleOption()" class="anchor"></a><div class="method private inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private"><span class="highlight">parseSingleOption</span><span class="nb-faded-text">(
+          string $options, <a href="http://php.net/manual/en/class.stdclass.php">\stdClass</a> $result
+          )
+        </span>
+        :
+          void</code><div class="description">
+<span class="attribute">inherited</span><p class="short_description">Parses single option received</p>
+<small>Inherited from:
+                    <a href="db_DMS_Filter_Rules_Rule.html#%5CDMS%5CFilter%5CRules%5CRule::parseSingleOption()">\DMS\Filter\Rules\Rule::parseSingleOption()</a><a href="db_DMS_Filter_Rules_RegExp.html#%5CDMS%5CFilter%5CRules%5CRegExp::parseSingleOption()">\DMS\Filter\Rules\RegExp::parseSingleOption()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$options</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$result</th>
+<td><a href="http://php.net/manual/en/class.stdclass.php">\stdClass</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
 <div class="clear"></div>
 </div>
 </div>
 </div>
 </div>
-<small xmlns="" class="footer">Documentation was generated by <a href="http://docblox-project.org">DocBlox 0.17.2</a>.
+<small xmlns="" class="footer">Documentation was generated by <a href="http://docblox-project.org">DocBlox 0.18.1</a>.
     </small></body></html>

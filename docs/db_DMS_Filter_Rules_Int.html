@@ -112,13 +112,63 @@ Converts content into an Int</p>
 </dl>
 <h3>Methods</h3>
 <div>
-<a id="\DMS\Filter\Rules\Int::applyFilter()" class="anchor"></a><div class="method public">
-<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">applyFilter</span><span class="nb-faded-text">(
-           $value
+<a id="\DMS\Filter\Rules\Int::__construct()" class="anchor"></a><div class="method public inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__construct</span><span class="nb-faded-text">(
+          mixed $options
+              =
+              null
           )
         </span>
         :
-          void</code><div class="description"><p class="short_description">{@inheritDoc}</p></div>
+          void</code><div class="description">
+<span class="attribute">inherited</span><p class="short_description">Initializes the filter rule with its options</p>
+<small>Inherited from:
+                    <a href="db_DMS_Filter_Rules_Rule.html#%5CDMS%5CFilter%5CRules%5CRule::__construct()">\DMS\Filter\Rules\Rule::__construct()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$options</th>
+<td>mixed</td>
+<td><em><p>The options (as associative array) or the value for the default option (any other type)</p>
+</em></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_DMS_Filter_Exception_InvalidOptionsException.html#%5CDMS%5CFilter%5CException%5CInvalidOptionsException">\DMS\Filter\Exception\InvalidOptionsException</a></td>
+<td><em>When you pass the names of non-existing options</em></td>
+</tr>
+<tr>
+<td><a href="db_DMS_Filter_Exception_MissingOptionsException.html#%5CDMS%5CFilter%5CException%5CMissingOptionsException">\DMS\Filter\Exception\MissingOptionsException</a></td>
+<td><em>When you don't pass any of the options returned by getRequiredOptions()</em></td>
+</tr>
+<tr>
+<td>\DMS\Filter\Rules\ConstraintDefinitionException</td>
+<td><em>When you don't pass an associative array, but getDefaultOption() returns NULL</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\DMS\Filter\Rules\Int::applyFilter()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">applyFilter</span><span class="nb-faded-text">(
+          mixed $value
+          )
+        </span>
+        :
+          mixed</code><div class="description"><p class="short_description">Applies actual filter rule to the value and returns the filtered
+value to be replaced in the original object</p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Parameters</strong><table class="argument-info">
@@ -129,7 +179,186 @@ Converts content into an Int</p>
 </tr></thead>
 <tr>
 <th>$value</th>
+<td>mixed</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>mixed</td>
 <td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\DMS\Filter\Rules\Int::getDefaultOption()" class="anchor"></a><div class="method public inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getDefaultOption</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<span class="attribute">inherited</span><p class="short_description">Returns the name of the default option</p>
+<small>Inherited from:
+                    <a href="db_DMS_Filter_Rules_Rule.html#%5CDMS%5CFilter%5CRules%5CRule::getDefaultOption()">\DMS\Filter\Rules\Rule::getDefaultOption()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Override this method to define a default option.</p></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td></td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\DMS\Filter\Rules\__construct()
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\DMS\Filter\Rules\Int::getRequiredOptions()" class="anchor"></a><div class="method public inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getRequiredOptions</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          array</code><div class="description">
+<span class="attribute">inherited</span><p class="short_description">Returns the name of the required options</p>
+<small>Inherited from:
+                    <a href="db_DMS_Filter_Rules_Rule.html#%5CDMS%5CFilter%5CRules%5CRule::getRequiredOptions()">\DMS\Filter\Rules\Rule::getRequiredOptions()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Override this method if you want to define required options.</p></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>array</td>
+<td></td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\DMS\Filter\Rules\__construct()
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\DMS\Filter\Rules\Int::parseOptions()" class="anchor"></a><div class="method private inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private"><span class="highlight">parseOptions</span><span class="nb-faded-text">(
+          mixed $options
+          )
+        </span>
+        :
+          <a href="http://php.net/manual/en/class.stdclass.php">\stdClass</a></code><div class="description">
+<span class="attribute">inherited</span><p class="short_description">Parses provided options into their properties and returns results
+for the parsing process</p>
+<small>Inherited from:
+                    <a href="db_DMS_Filter_Rules_Rule.html#%5CDMS%5CFilter%5CRules%5CRule::parseOptions()">\DMS\Filter\Rules\Rule::parseOptions()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$options</th>
+<td>mixed</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="http://php.net/manual/en/class.stdclass.php">\stdClass</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\DMS\Filter\Rules\Int::parseOptionsArray()" class="anchor"></a><div class="method private inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private"><span class="highlight">parseOptionsArray</span><span class="nb-faded-text">(
+          array $options, <a href="http://php.net/manual/en/class.stdclass.php">\stdClass</a> $result
+          )
+        </span>
+        :
+          void</code><div class="description">
+<span class="attribute">inherited</span><p class="short_description">Parses Options in the array format</p>
+<small>Inherited from:
+                    <a href="db_DMS_Filter_Rules_Rule.html#%5CDMS%5CFilter%5CRules%5CRule::parseOptionsArray()">\DMS\Filter\Rules\Rule::parseOptionsArray()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$options</th>
+<td>array</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$result</th>
+<td><a href="http://php.net/manual/en/class.stdclass.php">\stdClass</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\DMS\Filter\Rules\Int::parseSingleOption()" class="anchor"></a><div class="method private inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private"><span class="highlight">parseSingleOption</span><span class="nb-faded-text">(
+          string $options, <a href="http://php.net/manual/en/class.stdclass.php">\stdClass</a> $result
+          )
+        </span>
+        :
+          void</code><div class="description">
+<span class="attribute">inherited</span><p class="short_description">Parses single option received</p>
+<small>Inherited from:
+                    <a href="db_DMS_Filter_Rules_Rule.html#%5CDMS%5CFilter%5CRules%5CRule::parseSingleOption()">\DMS\Filter\Rules\Rule::parseSingleOption()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$options</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$result</th>
+<td><a href="http://php.net/manual/en/class.stdclass.php">\stdClass</a></td>
 <td><em></em></td>
 </tr>
 </table>
@@ -139,5 +368,5 @@ Converts content into an Int</p>
 </div>
 </div>
 </div>
-<small xmlns="" class="footer">Documentation was generated by <a href="http://docblox-project.org">DocBlox 0.17.2</a>.
+<small xmlns="" class="footer">Documentation was generated by <a href="http://docblox-project.org">DocBlox 0.18.1</a>.
     </small></body></html>

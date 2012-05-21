@@ -3,19 +3,23 @@
 namespace DMS\Filter\Rules;
 
 /**
- * Alnum Rule (Alpanumeric)
- * 
+ * Alnum Rule (Alphanumeric)
+ *
  * @package DMS
  * @subpackage Filter
- * 
+ *
  * @Annotation
  */
-class Alnum extends Rule
+class Alnum extends RegExp
 {
-    protected static $unicodeEnabled;
-    
+
+    /**
+     * Allow Whitespace or not
+     *
+     * @var bool
+     */
     public $allowWhitespace = true;
-    
+
     /**
      * {@inheritDoc}
      */
@@ -23,28 +27,13 @@ class Alnum extends Rule
     {
         //Check for Whitespace support
         $whitespaceChar = ($this->allowWhitespace)? " ":"";
-        
-        //Build pattern
-        $pattern = ($this->checkUnicodeSupport())? 
-                        '/[^\p{L}\p{N}' . $whitespaceChar . ']/u' : 
-                        '/[^a-zA-Z0-9' . $whitespaceChar . ']/' ;
-        
-        return preg_replace($pattern, '', $value);
+
+        $this->unicodePattern = '/[^\p{L}\p{N}' . $whitespaceChar . ']/u';
+        $this->pattern        = '/[^a-zA-Z0-9' . $whitespaceChar . ']/';
+
+        return parent::applyFilter($value);
     }
 
-    /**
-     * Verifies that Regular Expression functions support unicode
-     * @return boolean
-     */
-    public function checkUnicodeSupport()
-    {
-        if (null === self::$unicodeEnabled) {
-            self::$unicodeEnabled = (@preg_match('/\pL/u', 'a')) ? true : false;
-        }
-        
-        return self::$unicodeEnabled;
-    }
-    
     /**
      * {@inheritDoc}
      */
