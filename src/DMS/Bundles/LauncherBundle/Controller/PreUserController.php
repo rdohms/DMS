@@ -11,7 +11,7 @@ use DMS\Bundles\LauncherBundle\Entity\PreUser;
 /**
  * PreUser controller.
  *
- * @Route("/admin/preuser")
+ * @Route("/launcher/admin/preuser")
  */
 class PreUserController extends Controller
 {

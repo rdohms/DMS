@@ -23,7 +23,8 @@ class Configuration implements ConfigurationInterface
         $rootNode->children()->scalarNode('stylesheet')->defaultValue('/bundles/dmslauncher/css/launcher.css')->end();
         $rootNode->children()->scalarNode('site_url')->cannotBeEmpty()->isRequired()->end();
         $rootNode->children()->scalarNode('twitter_account')->defaultNull()->end();
-        
+        $rootNode->children()->scalarNode('enable')->defaultTrue()->end();
+
         return $treeBuilder;
     }
 }
