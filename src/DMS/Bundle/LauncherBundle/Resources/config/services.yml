@@ -15,3 +15,5 @@ services:
         class: DMS\Bundle\LauncherBundle\Listener\AccessListener
         arguments:
             enable: %dms_launcher.site_url%
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
