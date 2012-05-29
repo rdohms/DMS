@@ -52,4 +52,45 @@ class PreUserController extends Controller
         );
     }
 
+    /**
+     * Lists all PreUsers
+     *
+     * @Route("/", name="preuser_list")
+     * @Template()
+     *
+     * @return array
+     */
+    public function listAction()
+    {
+        /** @var $preUserService \DMS\Bundle\LauncherBundle\Service\PreUserService */
+        $preUserService = $this->container->get('dms_launcher.preUser');
+
+        $preUsers = $preUserService->getAll();
+
+        return array(
+            'users' => $preUsers
+        );
+    }
+
+    /**
+     * Triggers process to welcome user into application.
+     *
+     */
+    public function consolidateAction($preUserId)
+    {
+
+        /** @var $preUserService \DMS\Bundle\LauncherBundle\Service\PreUserService */
+        $preUserService = $this->container->get('dms_launcher.preUser');
+
+        $preUser = $preUserService->get($preUserId);
+
+        if ($preUser === null) {
+            //TODO User not found
+        }
+
+        /** @var $consolidationService \DMS\Bundle\LauncherBundle\Service\UserConsolidationServiceInterface */
+        $consolidationService = $this->get('launcher.preUser.consolidator');
+
+        return $consolidationService->consolidatePreUser($preUser);
+    }
 }
