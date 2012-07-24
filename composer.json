@@ -28,5 +28,5 @@
             "DMS": "src/",
             "Tests": "tests/"
         }
-    },
+    }
 }
