@@ -1,0 +1,223 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>DMS » \DMS\Filter\ObjectWalker</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">DMS</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/DMS.html"><i class="icon-th"></i> DMS</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/DMS.html"><i class="icon-folder-open"></i> DMS</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">137</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">2</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: Constructor"><span class="description">Constructor</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#applyFilterRule" title="applyFilterRule :: Applies a Filtering Rule to a property"><span class="description">Applies a Filtering Rule to a property</span><pre>applyFilterRule()</pre></a></li>
+<li class="method public "><a href="#applyFilterRules" title="applyFilterRules :: Applies the selected rules to a property in the object"><span class="description">Applies the selected rules to a property in the object</span><pre>applyFilterRules()</pre></a></li>
+<li class="nav-header private">» Private</li>
+<li class="method private "><a href="#getAccessibleReflectionProperty" title="getAccessibleReflectionProperty :: Retrieves a property from the object and makes it visible"><span class="description">Retrieves a property from the object and makes it visible</span><pre>getAccessibleReflectionProperty()</pre></a></li>
+<li class="method private "><a href="#getPropertyValue" title="getPropertyValue :: Retrieves the value of the property, overcoming visibility problems"><span class="description">Retrieves the value of the property, overcoming visibility problems</span><pre>getPropertyValue()</pre></a></li>
+<li class="method private "><a href="#setPropertyValue" title="setPropertyValue :: Overrides the value of a property, overcoming visibility problems"><span class="description">Overrides the value of a property, overcoming visibility problems</span><pre>setPropertyValue()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24object" title="$object :: "><span class="description">$object</span><pre>$object</pre></a></li>
+<li class="property protected "><a href="#%24reflClass" title="$reflClass :: "><span class="description">$reflClass</span><pre>$reflClass</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CDMS%5CFilter%5CObjectWalker" id="\DMS\Filter\ObjectWalker"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/DMS.html">DMS</a></li>
+<span class="divider">\</span><li><a href="../namespaces/DMS.Filter.html">Filter</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/DMS.Filter.ObjectWalker.html">ObjectWalker</a>
+</li>
+</ul>
+<div href="../classes/DMS.Filter.ObjectWalker.html" class="element class">
+<p class="short_description">Walks over the properties of an object applying the filters
+that were defined for them</p>
+<div class="details">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/DMS.Filter.html">DMS</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Filter</td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Constructor</h2>
+<pre>__construct(object $object) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$object</h4>
+<code>object</code>
+</div>
+</div></div>
+</div>
+<a name="applyFilterRule" id="applyFilterRule"></a><div class="element clickable method public applyFilterRule" data-toggle="collapse" data-target=".applyFilterRule .collapse">
+<h2>Applies a Filtering Rule to a property</h2>
+<pre>applyFilterRule(string $property, DMS\Filter\Rules\Rule $filterRule) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$filterRule</h4>
+<code>\Rules\Rule</code>
+</div>
+</div></div>
+</div>
+<a name="applyFilterRules" id="applyFilterRules"></a><div class="element clickable method public applyFilterRules" data-toggle="collapse" data-target=".applyFilterRules .collapse">
+<h2>Applies the selected rules to a property in the object</h2>
+<pre>applyFilterRules(string $property, array $filterRules) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$filterRules</h4>
+<code>array</code>
+</div>
+</div></div>
+</div>
+<a name="getAccessibleReflectionProperty" id="getAccessibleReflectionProperty"></a><div class="element clickable method private getAccessibleReflectionProperty" data-toggle="collapse" data-target=".getAccessibleReflectionProperty .collapse">
+<h2>Retrieves a property from the object and makes it visible</h2>
+<pre>getAccessibleReflectionProperty(string $propertyName) : <a href="http://php.net/manual/en/class.reflectionproperty.php">\ReflectionProperty</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$propertyName</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="http://php.net/manual/en/class.reflectionproperty.php">\ReflectionProperty</a></code></div>
+</div></div>
+</div>
+<a name="getPropertyValue" id="getPropertyValue"></a><div class="element clickable method private getPropertyValue" data-toggle="collapse" data-target=".getPropertyValue .collapse">
+<h2>Retrieves the value of the property, overcoming visibility problems</h2>
+<pre>getPropertyValue($propertyName) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$propertyName</h4>
+<code></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a name="setPropertyValue" id="setPropertyValue"></a><div class="element clickable method private setPropertyValue" data-toggle="collapse" data-target=".setPropertyValue .collapse">
+<h2>Overrides the value of a property, overcoming visibility problems</h2>
+<pre>setPropertyValue($propertyName, mixed $value) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$propertyName</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>mixed</code>
+</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24object" id="$object"> </a><div class="element clickable property protected $object" data-toggle="collapse" data-target=".$object .collapse">
+<h2>$object</h2>
+<pre>$object </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24reflClass" id="$reflClass"> </a><div class="element clickable property protected $reflClass" data-toggle="collapse" data-target=".$reflClass .collapse">
+<h2>$reflClass</h2>
+<pre>$reflClass </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a5</a> and<br>
+            generated on 2012-10-25T13:56:05+02:00.<br></footer></div>
+</div>
+</body>
+</html>

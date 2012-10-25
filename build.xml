@@ -4,7 +4,7 @@
 	<property name="distributionDir"  value="${project.basedir}/_distribution" override="true" />
 
 	<target name="docs">
-		<exec command="docblox run -v -d ${project.basedir}/src -t ${project.basedir}/docs --title DMS " />
+		<exec command="phpdoc -t ${project.basedir}/docs -d ${project.basedir}/src  --title DMS " />
 	</target>
 
     <target name="package" description="prepares for packaging">
@@ -15,7 +15,6 @@
     <target name="release_filter" description="Releases a new version">
         <propertyprompt propertyName="version" defaultValue="invalid-version"
                         promptText="Which version do you wish to tag? (do not include a 'v')" />
-
 
         <phingcall target="split_filter" />
 
@@ -62,7 +61,7 @@
     <target name="tag_release" description="Creates new release tag in child repository">
         <property name="targetDir"  value="${distributionDir}/${repoDir}" override="true" />
 
-        <exec command="git tag -a v${tagVersion} -m 'Automated tag for release of v${tagVersion}'" dir="${targetDir}" />
+        <exec command="git tag -a v${tagVersion} -m 'Automated tag for release of v${tagVersion}' --force" dir="${targetDir}" />
         <exec command="git push origin v${tagVersion} --force" dir="${targetDir}" />
     </target>
 </project>
