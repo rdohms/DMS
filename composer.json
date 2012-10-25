@@ -28,7 +28,5 @@
             "DMS": "src/",
             "Tests": "tests/"
         }
-    },
-
-    "target-dir": "DMS"
+    }
 }
