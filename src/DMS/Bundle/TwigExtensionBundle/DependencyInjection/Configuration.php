@@ -25,9 +25,9 @@ class Configuration implements ConfigurationInterface
                 ->addDefaultsIfNotSet()
                 ->children()
                     ->booleanNode('i18n')->defaultFalse()->end()
+                    ->booleanNode('debug')->defaultFalse()->end()
                     ->booleanNode('text')->defaultTrue()->end()
                     ->booleanNode('intl')->defaultTrue()->end()
-                    ->booleanNode('debug')->defaultTrue()->end()
                 ->end()
             ->end();
 
