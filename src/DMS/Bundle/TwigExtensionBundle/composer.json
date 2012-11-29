@@ -1,0 +1,28 @@
+{
+    "name":        "dms/twig-extension-bundle",
+    "type":        "symfony-bundle",
+    "description": "DMS Twig Extension Bundle, leverages Fabien Potencier's extra twig extensions for your website.",
+    "keywords":    [ "dms", "symfony", "bundle", "twig", "twig extension", "fabpot"],
+    "homepage":    "https://github.com/rdohms/DMSTwigExtensionsBundle",
+    "license":     "MIT",
+
+    "authors": [
+        {
+            "name": "Rafael Dohms",
+            "homepage": "http://doh.ms"
+        }
+    ],
+
+    "require": {
+        "php":  ">=5.3.3",
+        "twig/extensions": "1.*"
+    },
+
+    "autoload": {
+        "psr-0": {
+            "DMS\\Bundle\\TwigExtensionBundle": ""
+        }
+    },
+
+    "target-dir": "DMS/Bundle/TwigExtensionBundle"
+}

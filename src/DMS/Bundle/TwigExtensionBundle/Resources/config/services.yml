@@ -1,0 +1,14 @@
+# Services are enabled via configuration, hence the twig.extension tag is not
+# added in these services.
+services:
+    dms_twig_extension.fabpot.intl:
+        class: Twig_Extensions_Extension_Intl
+
+    dms_twig_extension.fabpot.text:
+        class: Twig_Extensions_Extension_Text
+
+    dms_twig_extension.fabpot.i18n:
+        class: Twig_Extensions_Extension_I18n
+
+    dms_twig_extension.fabpot.debug:
+        class: Twig_Extensions_Extension_Debug
