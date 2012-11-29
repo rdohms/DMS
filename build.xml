@@ -43,6 +43,27 @@
         </phingcall>
 	</target>
 
+    <!-- Twig Extensions -->
+    <target name="release_twigext" description="Releases a new version">
+        <propertyprompt propertyName="version" defaultValue="invalid-version"
+                        promptText="Which version do you wish to tag? (do not include a 'v')" />
+
+        <phingcall target="split_twigext" />
+
+        <phingcall target="tag_release">
+            <property name="tagVersion" value="${version}"/>
+            <property name="repoDir" value="Bundle/TwigExtensionBundle" override="true"/>
+        </phingcall>
+    </target>
+
+    <target name="split_twigext" description="Does a Sub-Tree split for Twig Extensions Bundle (Lib + Package)">
+        <phingcall target="split_repository">
+            <property name="splitTargetDir" value="Bundle/TwigExtensionBundle" />
+            <property name="splitFilterDir" value="src/DMS/Bundle/TwigExtensionBundle" />
+            <property name="splitTargetRepo" value="git@github.com:rdohms/DMSTwigExtensionBundle.git" />
+        </phingcall>
+    </target>
+
     <!-- Laucher Bundle -->
     <!-- TODO -->
 
