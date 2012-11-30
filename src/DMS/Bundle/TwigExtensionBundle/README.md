@@ -29,7 +29,7 @@ Add extension to your composer file:
 
 or use composer's require command
 
-    composer require dms/twig-extension-bundle
+    composer require dms/twig-extension-bundle:1.*
     
 Load the bundle in your AppKernel
 
@@ -46,7 +46,7 @@ Load the bundle in your AppKernel
     
 ## Usage
 
-To control which extensions should be enabled, you can optionally add configuration settings:
+To control which extensions should be enabled, you can optionally add configuration settings in app/config.yml:
 
     dms_twig_extension:   
         fabpot:               
