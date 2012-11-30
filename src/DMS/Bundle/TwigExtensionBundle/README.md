@@ -46,7 +46,7 @@ Load the bundle in your AppKernel
     
 ## Usage
 
-To control which extensions should be enabled, you can optionally add configuration settings:
+To control which extensions should be enabled, you can optionally add configuration settings in app/config.yml:
 
     dms_twig_extension:   
         fabpot:               
