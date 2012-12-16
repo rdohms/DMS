@@ -7,7 +7,7 @@
 		</testsuite>
 		<testsuite name="Filter">
 			<directory>tests/DMS/Filter</directory>
-			<directory>src/DMS/Bundle/FilterBundle/Tests</directory>
+			<directory>src/DMS/Bundle/*/Tests</directory>
 		</testsuite>
 	</testsuites>
 
