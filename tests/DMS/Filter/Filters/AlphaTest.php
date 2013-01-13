@@ -1,8 +1,9 @@
 <?php
 
-namespace DMS\Filter\Rules;
+namespace DMS\Filter\Filters;
 
 use Tests;
+use DMS\Filter\Rules\Alpha as AlphaRule;
 
 class AlphaTest extends Tests\Testcase
 {
@@ -22,17 +23,18 @@ class AlphaTest extends Tests\Testcase
      */
     public function testRule($options, $value, $expectedResult, $unicodeSetting = null)
     {
-        $rule = new Alpha($options);
+        $rule   = new AlphaRule($options);
+        $filter = new Alpha();
 
         if ($unicodeSetting !== null) {
 
-            $property = new \ReflectionProperty($rule, 'unicodeEnabled');
+            $property = new \ReflectionProperty($filter, 'unicodeEnabled');
             $property->setAccessible(true);
-            $property->setValue($rule, $unicodeSetting);
+            $property->setValue($filter, $unicodeSetting);
 
         }
 
-        $result = $rule->applyFilter($value);
+        $result = $filter->apply($rule, $value);
 
         $this->assertEquals($expectedResult, $result);
     }

@@ -1,22 +1,23 @@
 <?php
 
-namespace DMS\Filter\Rules;
+namespace DMS\Filter\Filters;
 
 use Tests;
+use DMS\Filter\Rules\ToLower as ToLowerRule;
 
 class ToLowerTest extends Tests\Testcase
 {
-    
+
     public function setUp()
     {
         parent::setUp();
     }
-    
+
     public function tearDown()
     {
         parent::tearDown();
     }
-    
+
     /**
      * @dataProvider provideForRule
      */
@@ -25,14 +26,15 @@ class ToLowerTest extends Tests\Testcase
         if ($useEncoding && !function_exists('mb_strtolower')) {
             $this->markTestSkipped ('mbstring extension not enabled');
         }
-        
-        $rule = new ToLower($options);
-        
-        $result = $rule->applyFilter($value);
-        
+
+        $rule   = new ToLowerRule($options);
+        $filter = new ToLower();
+
+        $result = $filter->apply($rule, $value);
+
         $this->assertEquals($expectedResult, $result);
     }
-    
+
     /**
      * @expectedException \DMS\Filter\Exception\FilterException
      */
@@ -41,11 +43,13 @@ class ToLowerTest extends Tests\Testcase
         if ( ! function_exists('mb_strtolower')) {
             $this->markTestSkipped ('mbstring extension not enabled');
         }
-        
-        $rule = new ToLower(array('encoding' => 'invalid'));
-        $result = $rule->applyFilter('x');
+
+        $rule = new ToLowerRule(array('encoding' => 'invalid'));
+        $filter = new ToLower();
+
+        $result = $filter->apply($rule, 'x');
     }
-    
+
     public function provideForRule()
     {
         return array(

@@ -1,8 +1,9 @@
 <?php
 
-namespace DMS\Filter\Rules;
+namespace DMS\Filter\Filters;
 
 use Tests;
+use DMS\Filter\Rules\HtmlEntities as HtmlEntitiesRule;
 
 class HtmlEntitiesTest extends Tests\Testcase
 {
@@ -22,9 +23,10 @@ class HtmlEntitiesTest extends Tests\Testcase
      */
     public function testRule($options, $value, $expectedResult)
     {
-        $rule = new HtmlEntities($options);
+        $rule   = new HtmlEntitiesRule($options);
+        $filter = new HtmlEntities();
 
-        $result = $rule->applyFilter($value);
+        $result = $filter->apply($rule, $value);
 
         $this->assertEquals($expectedResult, $result);
     }

@@ -1,34 +1,36 @@
 <?php
 
-namespace DMS\Filter\Rules;
+namespace DMS\Filter\Filters;
 
 use Tests;
+use DMS\Filter\Rules\Trim as TrimRule;
 
 class TrimTest extends Tests\Testcase
 {
-    
+
     public function setUp()
     {
         parent::setUp();
     }
-    
+
     public function tearDown()
     {
         parent::tearDown();
     }
-    
+
     /**
      * @dataProvider provideForRule
      */
     public function testRule($options, $value, $expectedResult)
     {
-        $rule = new Trim($options);
-        
-        $result = $rule->applyFilter($value);
-        
+        $rule   = new TrimRule($options);
+        $filter = new Trim();
+
+        $result = $filter->apply($rule, $value);
+
         $this->assertEquals($expectedResult, $result);
     }
-    
+
     public function provideForRule()
     {
         return array(

@@ -1,8 +1,9 @@
 <?php
 
-namespace DMS\Filter\Rules;
+namespace DMS\Filter\Filters;
 
 use Tests;
+use DMS\Filter\Rules\PregReplace as PregReplaceRule;
 
 class PregReplaceTest extends Tests\Testcase
 {
@@ -22,9 +23,10 @@ class PregReplaceTest extends Tests\Testcase
      */
     public function testRule($options, $value, $expectedResult)
     {
-        $rule = new PregReplace($options);
+        $rule   = new PregReplaceRule($options);
+        $filter = new PregReplace();
 
-        $result = $rule->applyFilter($value);
+        $result = $filter->apply($rule, $value);
 
         $this->assertEquals($expectedResult, $result);
     }

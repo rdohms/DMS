@@ -1,22 +1,23 @@
 <?php
 
-namespace DMS\Filter\Rules;
+namespace DMS\Filter\Filters;
 
 use Tests;
+use DMS\Filter\Rules\ToUpper as ToUpperRule;
 
 class ToUpperTest extends Tests\Testcase
 {
-    
+
     public function setUp()
     {
         parent::setUp();
     }
-    
+
     public function tearDown()
     {
         parent::tearDown();
     }
-    
+
     /**
      * @dataProvider provideForRule
      */
@@ -25,14 +26,15 @@ class ToUpperTest extends Tests\Testcase
         if ($useEncoding && !function_exists('mb_strtoupper')) {
             $this->markTestSkipped ('mbstring extension not enabled');
         }
-        
-        $rule = new ToUpper($options);
-        
-        $result = $rule->applyFilter($value);
-        
+
+        $rule   = new ToUpperRule($options);
+        $filter = new ToUpper();
+
+        $result = $filter->apply($rule, $value);
+
         $this->assertEquals($expectedResult, $result);
     }
-    
+
     /**
      * @expectedException \DMS\Filter\Exception\FilterException
      */
@@ -41,11 +43,13 @@ class ToUpperTest extends Tests\Testcase
         if ( ! function_exists('mb_strtoupper')) {
             $this->markTestSkipped ('mbstring extension not enabled');
         }
-        
-        $rule = new ToUpper(array('encoding' => 'invalid'));
-        $result = $rule->applyFilter('x');
+
+        $rule   = new ToUpperRule(array('encoding' => 'invalid'));
+        $filter = new ToUpper();
+
+        $result = $filter->apply($rule, 'x');
     }
-    
+
     public function provideForRule()
     {
         return array(

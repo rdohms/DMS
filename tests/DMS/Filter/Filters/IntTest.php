@@ -1,34 +1,36 @@
 <?php
 
-namespace DMS\Filter\Rules;
+namespace DMS\Filter\Filters;
 
 use Tests;
+use DMS\Filter\Rules\Int as IntRule;
 
 class IntTest extends Tests\Testcase
 {
-    
+
     public function setUp()
     {
         parent::setUp();
     }
-    
+
     public function tearDown()
     {
         parent::tearDown();
     }
-    
+
     /**
      * @dataProvider provideForRule
      */
     public function testRule($options, $value, $expectedResult)
     {
-        $rule = new Int($options);
-        
-        $result = $rule->applyFilter($value);
-        
+        $rule   = new IntRule($options);
+        $filter = new Int();
+
+        $result = $filter->apply($rule, $value);
+
         $this->assertEquals($expectedResult, $result);
     }
-    
+
     public function provideForRule()
     {
         return array(

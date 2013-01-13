@@ -2,6 +2,7 @@
 
 namespace DMS\Filter;
 
+use DMS\Filter\Filters\Loader\FilterLoader;
 use Tests\Dummy;
 
 class FilterTest extends \Tests\Testcase
@@ -15,7 +16,7 @@ class FilterTest extends \Tests\Testcase
     {
         parent::setUp();
 
-        $this->filter = new Filter($this->buildMetadataFactory());
+        $this->filter = new Filter($this->buildMetadataFactory(), new FilterLoader());
     }
 
     public function tearDown()
