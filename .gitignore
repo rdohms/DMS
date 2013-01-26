@@ -6,4 +6,3 @@ _build/
 _distribution
 
 vendor/
-composer.lock
