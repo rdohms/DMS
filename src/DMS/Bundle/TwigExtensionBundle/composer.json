@@ -18,6 +18,10 @@
         "twig/extensions": "1.*"
     },
 
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+
     "autoload": {
         "psr-0": {
             "DMS\\Bundle\\TwigExtensionBundle": ""
