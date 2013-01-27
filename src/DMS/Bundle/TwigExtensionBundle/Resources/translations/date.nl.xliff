@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="ago.y">
+                <source>ago.y</source>
+                <target>{1}%value% jaar geleden|]1,Inf]%value% jaar geleden</target>
+            </trans-unit>
+            <trans-unit id="ago.m">
+                <source>ago.m</source>
+                <target>{1}%value% maand geleden|]1,Inf]%value% maanden geleden</target>
+            </trans-unit>
+            <trans-unit id="ago.d">
+                <source>ago.d</source>
+                <target>{1}%value% dag geleden|]1,Inf]%value% dagen geleden</target>
+            </trans-unit>
+            <trans-unit id="ago.h">
+                <source>ago.h</source>
+                <target>{1}%value% uur geleden|]1,Inf]%value% uur geleden</target>
+            </trans-unit>
+            <trans-unit id="ago.i">
+                <source>ago.i</source>
+                <target>{1}%value% minuut geleden|]1,Inf]%value% minuten geleden</target>
+            </trans-unit>
+            <trans-unit id="ago.s">
+                <source>ago.s</source>
+                <target>{1}%value% seconden geleden|]1,Inf]%value% seconden geleden</target>
+            </trans-unit>
+
+            <trans-unit id="next.y">
+                <source>next.y</source>
+                <target>{1}over %value% jaar|]1,Inf]over %value% jaar</target>
+            </trans-unit>
+            <trans-unit id="next.m">
+                <source>next.m</source>
+                <target>{1}over %value% maand|]1,Inf]over %value% maanden</target>
+            </trans-unit>
+            <trans-unit id="next.d">
+                <source>next.d</source>
+                <target>{1}over %value% dag|]1,Inf]over %value% dagen</target>
+            </trans-unit>
+            <trans-unit id="next.h">
+                <source>next.h</source>
+                <target>{1}over %value% uur|]1,Inf]over %value% uur</target>
+            </trans-unit>
+            <trans-unit id="next.i">
+                <source>next.i</source>
+                <target>{1}over %value% minuut|]1,Inf]over %value% minuten</target>
+            </trans-unit>
+            <trans-unit id="next.s">
+                <source>next.s</source>
+                <target>{1}over %value% seconden|]1,Inf]over %value% seconden</target>
+            </trans-unit>
+
+            <trans-unit id="date.yesterday">
+                <source>date.yesterday</source>
+                <target>gisteren</target>
+            </trans-unit>
+            <trans-unit id="date.tomorrow">
+                <source>date.tomorrow</source>
+                <target>morgen</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

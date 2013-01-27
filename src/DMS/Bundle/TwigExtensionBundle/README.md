@@ -17,6 +17,12 @@ Available at [Fabien's repository](https://github.com/fabpot/Twig-extensions) th
 
 Further [documentation](https://github.com/fabpot/Twig-extensions/blob/master/doc/index.rst) is available in the repository.
 
+### DMS Extensions
+
+These are custom extensions which I find myself writing over and over for new projects.
+
+* Textual Date: converts timestamp into dates like: `2 days ago` ([docs](Resources/doc/textual_date.rst))
+
 ## Installing
 
 Add extension to your composer file:
@@ -51,9 +57,11 @@ To control which extensions should be enabled, you can optionally add configurat
     dms_twig_extension:   
         fabpot:               
             i18n:                 false 
+            debug:                false 
             text:                 true 
             intl:                 true 
-            debug:                true 
+        dms:                  
+            textual_date:         true             
         
 Extensions set to `false` will not be loaded. Please refer to the extensions documentation for detailed usage on each one.
 

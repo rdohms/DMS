@@ -1,6 +1,8 @@
 # Services are enabled via configuration, hence the twig.extension tag is not
 # added in these services.
 services:
+
+# Fabien Potencier' Twig Extensions
     dms_twig_extension.fabpot.intl:
         class: Twig_Extensions_Extension_Intl
 
@@ -12,3 +14,9 @@ services:
 
     dms_twig_extension.fabpot.debug:
         class: Twig_Extensions_Extension_Debug
+
+# DMS Twig Extensions
+    dms_twig_extension.dms.textual_date:
+        class: DMS\Bundle\TwigExtensionBundle\Twig\Date\TextualDateExtension
+        arguments:
+            translator: @translator

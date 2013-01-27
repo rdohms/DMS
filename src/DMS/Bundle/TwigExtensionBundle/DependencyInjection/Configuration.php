@@ -31,6 +31,14 @@ class Configuration implements ConfigurationInterface
                 ->end()
             ->end();
 
+        $rootNode->children()
+            ->arrayNode('dms')
+                ->addDefaultsIfNotSet()
+                ->children()
+                    ->booleanNode('textual_date')->defaultTrue()->end()
+                ->end()
+            ->end();
+
         return $treeBuilder;
     }
 }

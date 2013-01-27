@@ -102,7 +102,7 @@ class DelegatingFilterListenerTest extends \PHPUnit_Framework_TestCase
 
     protected function getMockForm()
     {
-        return $this->getMock('Symfony\Component\Form\Tests\FormInterface');
+        return $this->getMockBuilder('Symfony\Component\Form\Form')->disableOriginalConstructor()->getMock();
     }
 
     public function testFilterIgnoresNonRoot()

@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="ago.y">
+                <source>ago.y</source>
+                <target>{1}há %value% ano|]1,Inf]há %value% anos</target>
+            </trans-unit>
+            <trans-unit id="ago.m">
+                <source>ago.m</source>
+                <target>{1}há %value% mês|]1,Inf]há %value% meses</target>
+            </trans-unit>
+            <trans-unit id="ago.d">
+                <source>ago.d</source>
+                <target>{1}há %value% dia|]1,Inf]há %value% dias</target>
+            </trans-unit>
+            <trans-unit id="ago.h">
+                <source>ago.h</source>
+                <target>{1}há %value% hora|]1,Inf]há %value% horas</target>
+            </trans-unit>
+            <trans-unit id="ago.i">
+                <source>ago.i</source>
+                <target>{1}há %value% minuto|]1,Inf]há %value% minutos</target>
+            </trans-unit>
+            <trans-unit id="ago.s">
+                <source>ago.s</source>
+                <target>{1}há %value% segundo|]1,Inf]há %value% segundos</target>
+            </trans-unit>
+
+            <trans-unit id="next.y">
+                <source>next.y</source>
+                <target>{1}em %value% ano|]1,Inf]em %value% anos</target>
+            </trans-unit>
+            <trans-unit id="next.m">
+                <source>next.m</source>
+                <target>{1}em %value% mês|]1,Inf]em %value% meses</target>
+            </trans-unit>
+            <trans-unit id="next.d">
+                <source>next.d</source>
+                <target>{1}em %value% dia|]1,Inf]em %value% dias</target>
+            </trans-unit>
+            <trans-unit id="next.h">
+                <source>next.h</source>
+                <target>{1}em %value% hora|]1,Inf]em %value% horas</target>
+            </trans-unit>
+            <trans-unit id="next.i">
+                <source>next.i</source>
+                <target>{1}em %value% minuto|]1,Inf]em %value% minutos</target>
+            </trans-unit>
+            <trans-unit id="next.s">
+                <source>next.s</source>
+                <target>{1}em %value% segundo|]1,Inf]em %value% segundos</target>
+            </trans-unit>
+
+            <trans-unit id="date.yesterday">
+                <source>date.yesterday</source>
+                <target>ontem</target>
+            </trans-unit>
+            <trans-unit id="date.tomorrow">
+                <source>date.tomorrow</source>
+                <target>amanhã</target>
+            </trans-unit>
+            <trans-unit id="date.just_now">
+                <source>date.just_now</source>
+                <target>agora mesmo</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
