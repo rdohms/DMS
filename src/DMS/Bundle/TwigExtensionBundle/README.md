@@ -21,7 +21,7 @@ Further [documentation](https://github.com/fabpot/Twig-extensions/blob/master/do
 
 These are custom extensions which I find myself writing over and over for new projects.
 
-* Textual Date: converts timestamp into dates like: `2 days ago` ([docs](Resources/doc/textual_date.rst))
+* Textual Date: converts timestamp into dates like: `2 days ago` ([docs](/Resources/doc/textual_date.md))
 
 ## Installing
 
