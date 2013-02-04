@@ -3,7 +3,7 @@
     "type":        "symfony-bundle",
     "description": "DMS Twig Extension Bundle, leverages Fabien Potencier's extra twig extensions for your website.",
     "keywords":    [ "dms", "symfony", "bundle", "twig", "twig extension", "fabpot"],
-    "homepage":    "https://github.com/rdohms/DMSTwigExtensionsBundle",
+    "homepage":    "https://github.com/rdohms/DMSTwigExtensionBundle",
     "license":     "MIT",
 
     "authors": [
