@@ -1,5 +1,5 @@
 <?php
-namespace DMS\Bundle\TwigExtensionBundle\Twig\Date;
+namespace DMS\Bundle\TwigExtensionBundle\Twig\Text;
 
 /**
  * Adds support for Padding a String in Twig
