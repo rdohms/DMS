@@ -32,11 +32,12 @@ class PadStringExtension extends \Twig_Extension
      * Pads string on right or left with given padCharacter until string
      * reaches maxLength
      *
-     * @param $value
-     * @param $padCharacter
-     * @param $maxLength
-     * @param bool $padLeft
+     * @param string  $value
+     * @param string  $padCharacter
+     * @param int     $maxLength
+     * @param bool    $padLeft
      * @return string
+     * @throws \InvalidArgumentException
      */
     public function padStringFilter($value, $padCharacter, $maxLength, $padLeft = true)
     {
