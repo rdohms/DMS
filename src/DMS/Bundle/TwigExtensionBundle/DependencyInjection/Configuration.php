@@ -36,6 +36,7 @@ class Configuration implements ConfigurationInterface
                 ->addDefaultsIfNotSet()
                 ->children()
                     ->booleanNode('textual_date')->defaultTrue()->end()
+                    ->booleanNode('pad_string')->defaultTrue()->end()
                 ->end()
             ->end();
 
