@@ -35,32 +35,19 @@ class PadStringExtension extends \Twig_Extension
      * @param string  $value
      * @param string  $padCharacter
      * @param int     $maxLength
-     * @param bool    $padLeft
+     * @param string  $padType
+     *
      * @return string
      * @throws \InvalidArgumentException
      */
-    public function padStringFilter($value, $padCharacter, $maxLength, $padLeft = true)
+    public function padStringFilter($value, $padCharacter, $maxLength, $padType = 'STR_PAD_RIGHT')
     {
-        if ( ! is_int($maxLength) ) {
+        if ( ! is_int($maxLength)) {
             throw new \InvalidArgumentException('Pad String Filter expects its second argument to be an integer');
         }
+        $diff = strlen($value) - mb_strlen($value);
+        $padType = constant($padType);
 
-        if (function_exists('mb_strlen')) {
-            $padLength = $maxLength - mb_strlen($value);
-        } else {
-            $padLength = $maxLength - strlen($value);
-        }
-
-        if ($padLength <= 0) {
-            return $value;
-        }
-
-        $padString = str_repeat($padCharacter, $padLength);
-
-        if ($padLeft) {
-            return $padString . $value;
-        }
-
-        return $value . $padString;
+        return str_pad($value, $maxLength + $diff, $padCharacter, $padType);
     }
 }
