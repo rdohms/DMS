@@ -42,6 +42,9 @@ class PadStringExtension extends \Twig_Extension
      */
     public function padStringFilter($value, $padCharacter, $maxLength, $padType = 'STR_PAD_RIGHT')
     {
+        if ($this->isNullOrEmptyString($padCharacter)) {
+            throw new \InvalidArgumentException('Pad String Filter cannot accept a null value or empty string as its first argument');
+        }
         if ( ! is_int($maxLength)) {
             throw new \InvalidArgumentException('Pad String Filter expects its second argument to be an integer');
         }
@@ -49,5 +52,15 @@ class PadStringExtension extends \Twig_Extension
         $padType = constant($padType);
 
         return str_pad($value, $maxLength + $diff, $padCharacter, $padType);
+    }
+
+    /**
+     * Make sure a padCharacter is provided
+     *
+     * @param $padCharacter
+     * @return bool
+     */
+    protected function isNullOrEmptyString($padCharacter){
+        return (!isset($padCharacter) || trim($padCharacter)==='' || is_null($padCharacter));
     }
 }
