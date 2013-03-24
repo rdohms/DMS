@@ -1,0 +1,9 @@
+parameters:
+    dms_meetup_api.client_factory.class: DMS\Bundle\MeetupApiBundle\Service\ClientFactory
+
+services:
+    dms_meetup_api.client_factory:
+        class: %dms_meetup_api.client_factory.class%
+        arguments:
+            session: @session
+            config: %dms_meetup_api.client.config%
