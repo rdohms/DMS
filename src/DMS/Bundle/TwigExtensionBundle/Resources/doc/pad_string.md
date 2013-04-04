@@ -12,9 +12,9 @@ integer specifying the maximum length of the returned string
 and a string (optional) specifying which side to apply the
 padding:
 
-`{{ myString|padString('o', 4, 'STR_PAD_LEFT }}`
-`{{ myString|padString('o', 4, 'STR_PAD_BOTH }}`
-`{{ myString|padString('o', 4, 'STR_PAD_RIGHT }}`
+`{{ myString|padString('o', 4, 'STR_PAD_LEFT' }}`
+`{{ myString|padString('o', 4, 'STR_PAD_BOTH' }}`
+`{{ myString|padString('o', 4, 'STR_PAD_RIGHT' }}`
 `{{ myString|padString('o', 4 }}`
 
 If myString contained the value 'ps', the output of the above
