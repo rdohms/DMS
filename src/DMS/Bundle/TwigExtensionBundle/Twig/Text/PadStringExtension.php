@@ -48,7 +48,7 @@ class PadStringExtension extends \Twig_Extension
         if ( ! is_int($maxLength)) {
             throw new \InvalidArgumentException('Pad String Filter expects its second argument to be an integer');
         }
-        $diff = strlen($value) - mb_strlen($value);
+        $diff = (function_exists('mb_strlen'))? strlen($value) - mb_strlen($value) : 0;
         $padType = constant($padType);
 
         return str_pad($value, $maxLength + $diff, $padCharacter, $padType);
@@ -60,7 +60,8 @@ class PadStringExtension extends \Twig_Extension
      * @param $padCharacter
      * @return bool
      */
-    protected function isNullOrEmptyString($padCharacter){
+    protected function isNullOrEmptyString($padCharacter)
+    {
         return (!isset($padCharacter) || trim($padCharacter)==='' || is_null($padCharacter));
     }
 }
