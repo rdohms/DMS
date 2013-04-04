@@ -33,10 +33,10 @@ class PadStringExtensionTest extends \PHPUnit_Framework_TestCase
     public function provideForException()
     {
         return array(
-            array('ps', 'o', '4', 'STR_PAD_LEFT'),
-            array('woof', null, 6, 'STR_PAD_BOTH'),
-            array('squ', '', 2, 'STR_PAD_RIGHT'),
-            array('NO', '', '5'),
+            'max length must be an integer' => array('ps', 'o', '4', 'STR_PAD_LEFT'),
+            'pad character cannot be null' => array('woof', null, 6, 'STR_PAD_BOTH'),
+            'pad character cannot be empty' => array('squ', '', 2, 'STR_PAD_RIGHT'),
+            'invalid pad character and max length' => array('NO', '', '5'),
         );
     }
 
