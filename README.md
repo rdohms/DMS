@@ -16,6 +16,14 @@ The filter library is a standalone annotation based filter library for entities,
 
 Implements DMS\Filter in Symfony 2
 
+### Meetup API Bundle
+
+Makes a Meetup.com API client available and configured.
+
+### TwigExtension Bundle
+
+Leverages Fabien Potencier's "Twig Extensions" and more customs extensions into Symfony apps, allows you to quickly enable all of these extensions and also turn the on or off via configuration files.
+
 ### Launcher Bundle (pre-alpha)
 
 Allows you to run a pre-release campaign on your site and gather users before launching.
