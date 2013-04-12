@@ -61,7 +61,8 @@ To control which extensions should be enabled, you can optionally add configurat
             text:                 true 
             intl:                 true 
         dms:                  
-            textual_date:         true             
+            textual_date:         true
+            pad_string:           true
         
 Extensions set to `false` will not be loaded. Please refer to the extensions documentation for detailed usage on each one.
 
