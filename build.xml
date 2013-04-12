@@ -64,6 +64,27 @@
         </phingcall>
     </target>
 
+    <!-- Meetup Bundle -->
+    <target name="release_meetup" description="Releases a new version">
+        <propertyprompt propertyName="version" defaultValue="invalid-version"
+                        promptText="Which version do you wish to tag? (do not include a 'v')" />
+
+        <phingcall target="split_meetup" />
+
+        <phingcall target="tag_release">
+            <property name="tagVersion" value="${version}"/>
+            <property name="repoDir" value="Bundle/MeetupApiBundle" override="true"/>
+        </phingcall>
+    </target>
+
+    <target name="split_meetup" description="Does a Sub-Tree split for Meetup Bundle">
+        <phingcall target="split_repository">
+            <property name="splitTargetDir" value="Bundle/MeetupApiBundle" />
+            <property name="splitFilterDir" value="src/DMS/Bundle/MeetupApiBundle" />
+            <property name="splitTargetRepo" value="git@github.com:rdohms/DMSMeetupApiBundle.git" />
+        </phingcall>
+    </target>
+
     <!-- Laucher Bundle -->
     <!-- TODO -->
 

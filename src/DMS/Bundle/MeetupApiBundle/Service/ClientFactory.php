@@ -12,6 +12,8 @@ class ClientFactory
     const CLIENT_KEY   = 'key';
     const CLIENT_OAUTH = 'oauth';
 
+    const SESSION_TOKEN_KEY = 'meetup_token';
+    const SESSION_TOKEN_SECRET_KEY = 'meetup_token_secret';
     /**
      * @var SessionInterface
      */
@@ -73,12 +75,38 @@ class ClientFactory
      */
     public function getUpdatedOauthConfig()
     {
-        $token       = $this->session->has('meetup_token')? $this->session->get('meetup_token') : null;
-        $tokenSecret = $this->session->has('meetup_token_secret')? $this->session->get('meetup_token_secret') : null;
+        $token = $this->session->has(self::SESSION_TOKEN_KEY)
+                 ? $this->session->get(self::SESSION_TOKEN_KEY)
+                 : false;
+
+        $tokenSecret = $this->session->has(self::SESSION_TOKEN_SECRET_KEY)
+                       ? $this->session->get(self::SESSION_TOKEN_SECRET_KEY)
+                       : false;
 
         return array_merge(
             array('token' => $token, 'token_secret' => $tokenSecret),
             $this->config
         );
+    }
+
+    /**
+     * Set the necessary token in the session for future OAuth Clients
+     *
+     * @param string $token
+     * @param string $tokenSecret
+     */
+    public function setSessionTokens($token, $tokenSecret = null)
+    {
+        $this->session->set(self::SESSION_TOKEN_KEY, $token);
+        $this->session->set(self::SESSION_TOKEN_SECRET_KEY, $tokenSecret);
+    }
+
+    /**
+     * Removes tokens from session
+     */
+    public function clearSessionTokens()
+    {
+        $this->session->remove(self::SESSION_TOKEN_KEY);
+        $this->session->remove(self::SESSION_TOKEN_SECRET_KEY);
     }
 }
