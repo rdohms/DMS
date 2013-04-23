@@ -1,5 +1,7 @@
 parameters:
     dms_meetup_api.client_factory.class: DMS\Bundle\MeetupApiBundle\Service\ClientFactory
+    dms_meetup_api.key_client.class: DMS\Service\Meetup\MeetupKeyAuthClient
+    dms_meetup_api.oauth_client.class: DMS\Service\Meetup\MeetupOAuthClient
 
 services:
     dms_meetup_api.client_factory:
@@ -7,3 +9,13 @@ services:
         arguments:
             session: @session
             config: %dms_meetup_api.client.config%
+
+    dms_meetup_api.key_client:
+        class:            "%dms_meetup_api.key_client.class%"
+        factory_service:  dms_meetup_api.client_factory
+        factory_method:   getKeyAuthClient
+
+    dms_meetup_api.oauth_client:
+        class:            "%dms_meetup_api.oauth_client.class%"
+        factory_service:  dms_meetup_api.client_factory
+        factory_method:   getOauthClient

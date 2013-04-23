@@ -52,6 +52,21 @@ The OAuth client requires a bit more information to run. It has two parts, the c
             consumer_key:         <key>
             consumer_secret:      <secret>
             
-**But it also needs a valid `token` and `token secret`**, these must be obtained via a hand shake not implemented here. After this is done the token data must be set into the session as `meetup_token` and `meetup_token_secret`.
+**But it also needs a valid `token` and `token secret`**, these must be obtained via a hand shake. You can use the built-in handshake, or do it yourself. Once tokens are retrieved they must be set into the session using the `setSessionTokens($token, $tokenSecret)` method.
 
-The client will then have all of this injected when its instantiated.
+The client will then use these to sign future requests.
+
+## OAuth Handshake
+
+This bundle also has a built-in controller for performing the OAuth 1.0a handshake with the Meetup.com API. It will request the proper tokens, and store the access tokens in the session for use during that session.
+
+Once the handshake is done it will look for a route named `meetup_redirect_url` if this is defined it will redirect to that page, otherwise to the index page.
+
+To start the process redirect the user to the `meetup-oauth-authorize` route. It will get request tokens, redirect the user to the authorization url and then get proper access tokens if authorized.
+
+## Injecting into other services
+
+In order to inject the API clients (Key and OAuth) into other services there are two services defined that make use of Symfony's factory method options in the service definitions. These use the available factory methods to define new services easily usable in other services, they are:
+
+* `dms_meetup_api.key_client`
+* `dms_meetup_api.oauth_client`

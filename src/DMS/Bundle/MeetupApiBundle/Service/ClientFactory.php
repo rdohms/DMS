@@ -109,4 +109,16 @@ class ClientFactory
         $this->session->remove(self::SESSION_TOKEN_KEY);
         $this->session->remove(self::SESSION_TOKEN_SECRET_KEY);
     }
+
+    /**
+     * Checks if there is a token in the session
+     *
+     * @return bool
+     */
+    public function hasSessionTokens()
+    {
+        return ($this->session->has(self::SESSION_TOKEN_KEY)
+            && $this->session->has(self::SESSION_TOKEN_SECRET_KEY));
+    }
 }
+
