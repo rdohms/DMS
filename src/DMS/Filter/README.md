@@ -64,7 +64,7 @@ Filtering:
     $user->email = " email@mail.com";
 
     //Filter you entity
-    $filter->filter($user);
+    $filter->filterEntity($user);
 
     echo $user->name; //"My name"
     echo $user->email; //"email@mail.com"
