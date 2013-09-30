@@ -19,8 +19,8 @@
     },
 
     "require-dev": {
-        "symfony/symfony": "~2.1.0",
-        "doctrine/orm":    "~2.2"
+        "symfony/symfony": "~2.3.0",
+        "doctrine/orm":    "~2.4"
     },
 
     "autoload": {
