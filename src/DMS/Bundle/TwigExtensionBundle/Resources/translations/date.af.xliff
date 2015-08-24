@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file source-language="en" datatype="plaintext" original="file.ext">
         <body>
@@ -58,7 +58,7 @@
             </trans-unit>
             <trans-unit id="date.tomorrow">
                 <source>date.tomorrow</source>
-                <target>môre</target>
+                <target>mÃ´re</target>
             </trans-unit>
             <trans-unit id="date.just_now">
                 <source>date.just_now</source>
